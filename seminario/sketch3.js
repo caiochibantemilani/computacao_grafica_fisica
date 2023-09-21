@@ -1,57 +1,55 @@
-let world; // Variável para o mundo de física do Box2D
-let box; // Variável para a caixa
+let spring; // Constante da mola
+let damping; // Coeficiente de amortecimento
+let objectMass; // Massa do objeto
+let objectSize; // Tamanho do objeto
+
+let position; // Posição do objeto
+let velocity; // Velocidade do objeto
+let acceleration; // Aceleração do objeto
+
+let equilibriumY; // Posição de equilíbrio da mola
+let restLength; // Comprimento de repouso da mola
 
 function setup() {
   createCanvas(400, 400); // Cria um canvas de 400x400 pixels
-  world = new Box2D.b2World(new Box2D.b2Vec2(0, 10), true); // Cria o mundo de física com gravidade (0, 10)
-  
-  // Cria uma caixa no centro do canvas
-  box = new Box(width / 2, 50, 40, 40);
+
+  // Configuração inicial
+  spring = 0.1; // Constante da mola
+  damping = 0.1; // Coeficiente de amortecimento
+  objectMass = 10; // Massa do objeto
+  objectSize = 20; // Tamanho do objeto
+
+  equilibriumY = height / 2; // Posição de equilíbrio da mola
+  position = createVector(width / 2, equilibriumY - 200); // Posição inicial do objeto
+  velocity = createVector(0, 0); // Velocidade inicial do objeto
+  acceleration = createVector(0, 0); // Aceleração inicial do objeto
+
+  restLength = equilibriumY - position.y; // Comprimento de repouso da mola
 }
 
 function draw() {
   background(220); // Define o fundo do canvas
 
-  // Atualiza a simulação do mundo de física
-  world.Step(1 / 60, 10, 10);
+  // Calcula a força elástica da mola (F = -k * x)
+  const displacement = position.y - equilibriumY;
+  const springForce = -spring * displacement;
 
-  // Exibe a caixa
-  box.display();
-}
+  // Calcula a força de amortecimento (F = -c * v)
+  const dampingForce = -damping * velocity.y;
 
-class Box {
-  constructor(x, y, w, h) {
-    // Define as propriedades da caixa
-    this.w = w;
-    this.h = h;
+  // Aplica as forças
+  const totalForce = springForce + dampingForce;
+  acceleration.y = totalForce / objectMass;
+  velocity.add(acceleration);
+  position.add(velocity);
 
-    // Cria o corpo rígido no mundo de física
-    const bd = new Box2D.b2BodyDef();
-    bd.type = Box2D.b2_dynamicBody;
-    bd.position.Set(x, y);
-    this.body = world.CreateBody(bd);
+  // Desenha a mola
+  stroke(0);
+  line(width / 2, equilibriumY, position.x, position.y);
+  ellipse(position.x, position.y, objectSize, objectSize);
 
-    // Cria a forma da caixa
-    const fd = new Box2D.b2FixtureDef();
-    fd.shape = new Box2D.b2PolygonShape();
-    fd.shape.SetAsBox(w / 2, h / 2);
-    fd.density = 1.0;
-    fd.friction = 0.5;
-    fd.restitution = 0.2;
-    this.body.CreateFixture(fd);
-  }
-
-  display() {
-    // Obtém a posição do corpo rígido
-    const pos = this.body.GetPosition();
-
-    // Desenha a caixa na posição atual
-    push();
-    translate(pos.x * SCALE, pos.y * SCALE);
-    rotate(this.body.GetAngle());
-    rectMode(CENTER);
-    fill(0, 0, 255);
-    rect(0, 0, this.w, this.h);
-    pop();
-  }
+  // Desenha o ponto de equilíbrio da mola
+  fill(0);
+  noStroke();
+  ellipse(width / 2, equilibriumY, 20, 20);
 }
