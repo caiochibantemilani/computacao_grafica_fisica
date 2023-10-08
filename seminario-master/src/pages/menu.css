@@ -118,6 +118,7 @@ body {
 }
 
 .h2 {
+    cursor: default;
     font-size: 3rem !important;
     text-shadow: 1px 1px black;
     padding-left: 10px;
