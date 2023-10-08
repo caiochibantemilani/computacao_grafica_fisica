@@ -2,9 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 import './sistema_solar.css'
 import GravitySimulation from '../GravitySimulation';
+
 function SistemaSolar(anterior='') {
     const [gravity, setGravity] = useState('')
     const [planet,setPlanet] = useState('')
+
     function planeta_selecionado(event){
         let elementoId = event.target.id;
         if(elementoId === 'orbita_terra'){
@@ -21,7 +23,9 @@ function SistemaSolar(anterior='') {
             elementoId = ''
         }else if(planet !== ''){
             elementoId = ''
+
         }
+
         setPlanet(elementoId)
     }
     return(
@@ -37,9 +41,25 @@ function SistemaSolar(anterior='') {
                                 <div className="ponta"></div>
                             </div>
                         </div>
+                        <div id="mercurio" className="mercurio">
+                        </div>
+                        <div id="venus" className="venus">
+                        </div>
                         <div id="terra" className="terra">
                             <div id="lua" className="lua">
                             </div>
+                        </div>
+                        <div id="marte" class="marte">
+                        </div>
+                        <div id="jupiter" class="jupiter">
+                        </div>
+                        <div id="saturno" class="saturno">
+                            <div id="aneis" class="aneis">
+                            </div>
+                        </div>
+                        <div id="urano" class="urano">
+                        </div>
+                        <div id="neptuno" class="neptuno">
                         </div>
                         <div id="orbita_sol" className="orbita_sol">
                             <div className="legenda_terra" id='terra'>
@@ -80,3 +100,5 @@ function SistemaSolar(anterior='') {
         </>
     )
 }
+
+export default SistemaSolar
