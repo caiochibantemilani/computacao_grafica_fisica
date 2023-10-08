@@ -1,3 +1,24 @@
+.Sumario {
+    max-height: 500px;
+}
+
+.Sumario::-webkit-scrollbar {
+    width: 10px;
+}
+
+.Sumario::-webkit-scrollbar-thumb{
+    border-radius: 16px;
+    background: #99999988;
+}
+
+.Sumario::-webkit-scrollbar-thumb:active{
+    background: #999999;
+}
+
+body {
+    background-color: #262626 !important;
+}
+
 .all {
     overflow-y: hidden !important;
     --featured-img: linear-gradient(180deg,#fff,#262626);
