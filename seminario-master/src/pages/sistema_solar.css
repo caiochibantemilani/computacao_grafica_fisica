@@ -134,8 +134,8 @@ se transforma no "geral_dividido"*/
 }
 
 .aneis {
-    top: 83px;
-    right: 67px;
+    right: 60px;
+    top: 74px;
     width: 10em;
     height: 10em;
     animation: orbita 10s linear infinite;
