@@ -41,9 +41,25 @@ function SistemaSolar(anterior='') {
                                 <div className="ponta"></div>
                             </div>
                         </div>
+                        <div id="mercurio" className="mercurio">
+                        </div>
+                        <div id="venus" className="venus">
+                        </div>
                         <div id="terra" className="terra">
                             <div id="lua" className="lua">
                             </div>
+                        </div>
+                        <div id="marte" class="marte">
+                        </div>
+                        <div id="jupiter" class="jupiter">
+                        </div>
+                        <div id="saturno" class="saturno">
+                            <div id="aneis" class="aneis">
+                            </div>
+                        </div>
+                        <div id="urano" class="urano">
+                        </div>
+                        <div id="neptuno" class="neptuno">
                         </div>
                         <div id="orbita_sol" className="orbita_sol">
                             <div className="legenda_terra" id='terra'>
