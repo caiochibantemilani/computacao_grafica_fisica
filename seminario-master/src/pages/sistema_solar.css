@@ -1,13 +1,6 @@
-html {
-    font-size: 1rem;
-}
-
-/*Aqui estou pintando o fundo e retirando qualquer tipo de barra de rolagem, até pq o site é estático*/
 body {
-    background-color: black;
-    overflow: hidden;
+    background-color: black !important;
 }
-
 /*Quando a legenda aparecer na tela, preciso que a tela seja dividida, então estou organizando a tela por linhas, 
 ou seja, tudo na mesma linha, estou colocando tbm, uma transição de 2 segundos, para as animações acontecerem de forma suave*/
 .tela_dividida {
@@ -15,7 +8,6 @@ ou seja, tudo na mesma linha, estou colocando tbm, uma transição de 2 segundos
     flex-direction: row;
     justify-content: center;
 }
-
 /*Aqui estou centralizando todo o sistema solar e definindo seu tamanho*/
 .geral {
     margin: 0;
@@ -24,7 +16,6 @@ ou seja, tudo na mesma linha, estou colocando tbm, uma transição de 2 segundos
     align-items: center;
     justify-content: center;
 }
-
 /*Quando a tela fica dividida eu preciso que o tamanho e o sistema solar mudem, por isso que o geral 
 se transforma no "geral_dividido"*/
 .geral_dividido {
@@ -35,7 +26,6 @@ se transforma no "geral_dividido"*/
     align-items: center;
     justify-content: center;
 }
-
 /*Aqui estou definindo a parte dos textos, cor de fundo, o mouse, largura e assim vai*/
 .contexto {
     cursor: default;
@@ -47,7 +37,6 @@ se transforma no "geral_dividido"*/
     padding: 10px 50px;
     border-radius: 50px;
 }
-
 /*Aqui estou definindo a parte dos textos, cor de fundo, o mouse, largura e assim vai*/
 .sistema_solar {
     font-size: 10px;
@@ -58,7 +47,6 @@ se transforma no "geral_dividido"*/
     flex-direction: column;
     align-items: center;
 }
-
 /*Aqui, bom, é literalmente o meu sol, tô declarando como ele é*/
 .sol {
     z-index: 100;
@@ -75,14 +63,35 @@ se transforma no "geral_dividido"*/
     box-shadow: 0 0 3em white;
     transition: 0.8s;
 }
-
 /*Como a terra e a lua tem algumas caracteristicas em comum, decidi juntar os dois, pra economizar palavras*/
-.terra, .lua {
+.mercurio, .venus, .terra, .lua, .marte, .jupiter, .saturno, .urano, .neptuno  {
     position: absolute;
     border-style: solid;
     border-color: white transparent transparent transparent;
     border-width: 0.1em 0.1em 0 0;
     border-radius: 50%;
+}
+
+.aneis {
+    position: absolute;
+    border-style: solid;
+    border-color: #ffe34144;
+    border-width: 0.8em 0.8em 0.8em 0.8em;
+    border-radius: 50%;
+}
+
+.mercurio {
+    top: 13em;
+    width: 15em;
+    height: 15em;
+    animation: orbita 10s linear infinite;
+}
+
+.venus {
+    top: 10em;
+    width: 20em;
+    height: 20em;
+    animation: orbita 15s linear infinite;
 }
 
 /*Aqui eu defino como é a órbita da terra*/
@@ -102,31 +111,131 @@ se transforma no "geral_dividido"*/
     height: 8em;
     animation: orbita 10s linear infinite;
 }
-        
+
+.marte {
+    top: -1em;
+    width: 45em;
+    height: 45em;
+    animation: orbita 60s linear infinite;
+}
+
+.jupiter {
+    top: -7em;
+    width: 57em;
+    height: 57em;
+    animation: orbita 85s linear infinite;
+}
+
+.saturno {
+    top: -25em;
+    width: 85em;
+    height: 85em;
+    animation: orbita 110s linear infinite;
+}
+
+.aneis {
+    top: 83px;
+    right: 67px;
+    width: 10em;
+    height: 10em;
+    animation: orbita 10s linear infinite;
+}
+
+.urano {
+    top: -35em;
+    width: 110em;
+    height: 110em;
+    animation: orbita 150s linear infinite;
+}
+
+.neptuno {
+    top: -45em;
+    width: 140em;
+    height: 140em;
+    animation: orbita 200s linear infinite;
+}
+
+
 /*Aqui eu começo a fazer as bolinhas, que mais para frente vão virar nossos planetinhas*/
-.terra::before, .lua::before {
+.mercurio::before, .venus::before, .terra::before, .lua::before, .marte::before, .jupiter::before, .saturno::before, .urano::before, .neptuno::before {
     content: '';
     position: absolute;
     border-radius: 50%;
+}
+
+.mercurio::before {
+    top: 1.3em;
+    right: 2em;
+    width: 1em;
+    height: 1em;
+    background-color: lightyellow;
+}
+
+.venus::before {
+    top: 2em;
+    right: 1.5em;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: lightblue;
 }
 
 /*Aqui eu crio a terra*/
 .terra::before {
     top: 2.8em;
     right: 2.8em;
-    width: 3em;
-    height: 3em;
-    background-color: aqua;
+    width: 2.7em;
+    height: 2.7em;
+    background-color: aquamarine;
 }
-
 /*Aqui eu crio a lua*/
 .lua::before {
     top: 0.8em;
     right: 0.8em;
-    width: 1.2em;
-    height: 1.3em;
+    width: 0.8em;
+    height: 0.8em;
     background-color: silver;
 }
+
+.marte::before {
+    top: 6em;
+    right: 5em;
+    width: 1.4em;
+    height: 1.4em;
+    background-color: lightcoral;
+}
+
+.jupiter::before {
+    top: 3em;
+    right: 6em;
+    width: 7em;
+    height: 7em;
+    background-color: orange;
+}
+
+.saturno::before {
+    top: 11em;
+    right: 10em;
+    width: 4em;
+    height: 4em;
+    background-color: #ffe341;
+}
+
+.urano::before {
+    top: 14em;
+    right: 11em;
+    width: 5.5em;
+    height: 5.5em;
+    background-color: greenyellow;
+}
+
+.neptuno::before {
+    top: 17em;
+    right: 17em;
+    width: 5.5em;
+    height: 5.5em;
+    background-color: darkblue;
+}
+
 
 /*Uma variável em CSS, vou usar ela pra fazer as órbitas*/
 @keyframes orbita {
@@ -134,14 +243,12 @@ se transforma no "geral_dividido"*/
         transform: rotate(360deg);
     }
 }
-
 /*Esse é o contrário da órbita, pra deixar parado*/
 @keyframes orbita-inversa {
     to {
         transform: rotate(-360deg);
     }
 }
-
 /*Esse centro, nada mais é do que as legendas dos planetas*/
 .centro_lua, .centro_terra, .centro_sol {
     border-radius: 10px;
@@ -155,24 +262,20 @@ se transforma no "geral_dividido"*/
     flex-direction: column;
     align-items: center;
 }
-
 /*Aqui eu defino a velocidade contrária da legenda da lua*/
 .centro_lua {
     margin: -10px 20px;
     animation: orbita-inversa 8.3333s linear infinite;
 }
-
 /*Aqui eu defino a velocidade contrária da legenda da terra*/
 .centro_terra {
     margin: 40px 30px;
     animation: orbita-inversa 50s linear infinite;
 }
-
 /*Aqui eu defino a velocidade contrária da legenda da terra*/
 .orbita_sol, .orbita_terra, .legenda_terra, .legenda_lua {
     position: absolute;
 }
-
 /*Estou definindo novamente as as órbitas, mas agora é para conseguir clicar e colocar 
 legendas*/
 .orbita_sol {
@@ -182,13 +285,14 @@ legendas*/
     height: 30em;
     animation: orbita 50s linear infinite;
 }
-
 /*Aqui eu crio o campo para passar o mouse para a terra*/
 .legenda_terra, .legenda_lua {
     z-index: 100;
     cursor: pointer;
 }
-
+.legenda_terra_invisivel, .legenda_lua_invisivel {
+    cursor: default;
+}
 /*Aqui eu crio o campo para passar o mouse para a terra*/
 .legenda_terra {
     top: 25;
@@ -196,7 +300,6 @@ legendas*/
     width: 3.5em;
     height: 3.5em;
 }
-
 /*A órbita da terra seria a classe da lua, mas agora é para as legendas*/
 .orbita_terra {
     top: 0;
@@ -205,15 +308,13 @@ legendas*/
     height: 8em;
     animation: orbita 10s linear infinite;
 }
-
 /*Aqui eu crio a legenda para a lua*/
 .legenda_lua {
     top: 5px;
     right: 4px;
-    width: 2em;
-    height: 2em;
+    width: 1.5em;
+    height: 1.5em;
 }
-
 /*Criação do triângulo*/
 .ponta {
     position: absolute;
@@ -225,7 +326,6 @@ legendas*/
     transform: rotate(180deg);
     top: 11.5px;
 }
-
 /*Aqui fica o "sistema_solar"*/
 .legenda_sol {
     display: flex;
@@ -234,7 +334,6 @@ legendas*/
     top: -20px;
     align-items: center;
 }
-
 /*Aqui eu crio a legenda para o sol*/
 .centro_sol {
     color: white;
@@ -246,22 +345,10 @@ legendas*/
     flex-direction: column;
     align-items: center;
 }
-
-.gravityName{
-    align-items: flex-end;
-    color: white;
-}
-
-.simulacaobutton
 /*Quando eu clico no sol, a clase se transforma nessa, que faz ele crescer*/
 .crescer_sol {
     transform: scale(2.5);
 }
-
-.sumir{
-    display: none;
-}
-
 /*Quando eu clico no sol, a clase se transforma nessa, que faz ele crescer*/
 .crescer_terra {
     z-index: 100;
@@ -278,7 +365,6 @@ legendas*/
     transform: scale(2.5);
     transition: 0.8s;
 }
-
 /*Quando eu clico na lua, a clase se transforma nessa, que faz ele crescer*/
 .crescer_lua {
     z-index: 100;
@@ -295,30 +381,26 @@ legendas*/
     transform: scale(2.5);
     transition: 0.8s;
 }
-
 /*Aqui eu defino que as legendas não tem opacidade*/
 .centro_lua, .centro_sol, .centro_terra, .ponta {
     opacity: 0;
 }
-
+.centro_lua_invisivel, .centro_terra_invisivel {
+    cursor: default !important;
+    opacity: 0;
+}
 /*Aqui eu defino que as legendas da lua tem opacidade quando passa o mouse 
 sobre a lua*/
 .legenda_lua:hover .centro_lua {
     opacity: 1 !important;
 }
-
 /*Aqui eu defino que as legendas da terra tem opacidade quando passa o mouse 
 sobre a terra*/
 .legenda_terra:hover .centro_terra {
     opacity: 1 !important;
 }
-
 /*Aqui eu defino que todas as legendas tem opacidade quando passa o mouse 
 sobre a lua*/
 .crescer_lua:hover .centro_sol, .crescer_lua:hover .ponta, .crescer_terra:hover .centro_sol, .crescer_terra:hover .ponta, .sol:hover .centro_sol, .sol:hover .ponta {
     opacity: 1 !important;
-}
-
-.contextoPlaneta{
-    display: none;
 }
