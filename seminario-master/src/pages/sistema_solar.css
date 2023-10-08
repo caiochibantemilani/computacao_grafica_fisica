@@ -250,7 +250,7 @@ se transforma no "geral_dividido"*/
     }
 }
 /*Esse centro, nada mais é do que as legendas dos planetas*/
-.centro_lua, .centro_terra, .centro_sol {
+.centro_lua, .centro_terra, .centro_sol, .centro_venus, .centro_mercurio, .centro_marte, .centro_jupiter, .centro_saturno, .centro_urano, .centro_neptuno {
     border-radius: 10px;
     color: white;
     position: absolute;
@@ -264,7 +264,7 @@ se transforma no "geral_dividido"*/
 }
 /*Aqui eu defino a velocidade contrária da legenda da lua*/
 .centro_lua {
-    margin: -10px 20px;
+    margin: 0 10px;
     animation: orbita-inversa 8.3333s linear infinite;
 }
 /*Aqui eu defino a velocidade contrária da legenda da terra*/
@@ -272,8 +272,44 @@ se transforma no "geral_dividido"*/
     margin: 40px 30px;
     animation: orbita-inversa 50s linear infinite;
 }
+
+.centro_venus {
+    margin: 15px;
+    animation: orbita-inversa 15s linear infinite;
+}
+
+.centro_mercurio {
+    margin: 8px;
+    animation: orbita-inversa 10s linear infinite;
+}
+
+.centro_marte {
+    margin: 15px;
+    animation: orbita-inversa 60s linear infinite;
+}
+
+.centro_jupiter {
+    margin: 0 70px;
+    animation: orbita-inversa 85s linear infinite;
+}
+
+.centro_saturno {
+    margin: 40px 30px;
+    animation: orbita-inversa 110s linear infinite;
+}
+
+.centro_urano {
+    margin: 40px 30px;
+    animation: orbita-inversa 150s linear infinite;
+}
+
+.centro_neptuno {
+    margin: 40px 30px;
+    animation: orbita-inversa 200s linear infinite;
+}
+
 /*Aqui eu defino a velocidade contrária da legenda da terra*/
-.orbita_sol, .orbita_terra, .legenda_terra, .legenda_lua {
+.orbita_sol, .orbita_terra, .orbita_venus, .orbita_mercurio, .orbita_marte, .orbita_jupiter, .orbita_saturno, .orbita_urano, .orbita_neptuno, .legenda_neptuno, .legenda_urano, .legenda_saturno, .legenda_jupiter, .legenda_marte, .legenda_venus, .legenda_mercurio, .legenda_terra, .legenda_lua {
     position: absolute;
 }
 /*Estou definindo novamente as as órbitas, mas agora é para conseguir clicar e colocar 
@@ -285,21 +321,132 @@ legendas*/
     height: 30em;
     animation: orbita 50s linear infinite;
 }
+
+.orbita_venus {
+    top: 10em;
+    width: 20em;
+    height: 20em;
+    animation: orbita 15s linear infinite;
+}
+
+.orbita_mercurio {
+    top: 13em;
+    width: 15em;
+    height: 15em;
+    animation: orbita 10s linear infinite;
+}
+
+
+.orbita_marte {
+    top: -1em;
+    width: 45em;
+    height: 45em;
+    animation: orbita 60s linear infinite;
+}
+
+.orbita_jupiter {
+    top: -7em;
+    width: 57em;
+    height: 57em;
+    animation: orbita 85s linear infinite;
+}
+
+.orbita_saturno {
+    top: -25em;
+    width: 85em;
+    height: 85em;
+    animation: orbita 110s linear infinite;
+}
+
+
+.orbita_urano {
+    top: -35em;
+    width: 110em;
+    height: 110em;
+    animation: orbita 150s linear infinite;
+}
+
+.orbita_neptuno {
+    top: -45em;
+    width: 140em;
+    height: 140em;
+    animation: orbita 200s linear infinite;
+}
+
+
 /*Aqui eu crio o campo para passar o mouse para a terra*/
-.legenda_terra, .legenda_lua {
+.legenda_mercurio, .legenda_venus, .legenda_terra, .legenda_lua, .legenda_marte, .legenda_jupiter, .legenda_saturno, .legenda_urano, .legenda_neptuno {
     z-index: 100;
     cursor: pointer;
 }
 .legenda_terra_invisivel, .legenda_lua_invisivel {
     cursor: default;
 }
+
+.legenda_venus {
+    cursor: pointer;
+    top: 20px;
+    right: 12px;
+    width: 3em;
+    height: 3em;
+}
+
+.legenda_mercurio {
+    cursor: pointer;
+    top: 14px;
+    right: 16px;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.legenda_marte {
+    cursor: pointer;
+    top: 57px;
+    right: 44px;
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.legenda_jupiter {
+    cursor: pointer;
+    top: 29px;
+    right: 59px;
+    width: 7.5em;
+    height: 7.5em;
+}
+
+.legenda_saturno {
+    cursor: pointer;
+    top: 98px;
+    right: 87px;
+    width: 6.5em;
+    height: 6.5em;
+}
+
+.legenda_urano {
+    cursor: pointer;
+    top: 143px;
+    right: 111px;
+    width: 5.5em;
+    height: 5.5em;
+}
+
+.legenda_neptuno {
+    cursor: pointer;
+    top: 173px;
+    right: 170px;
+    width: 5.5em;
+    height: 5.5em;
+}
+
 /*Aqui eu crio o campo para passar o mouse para a terra*/
 .legenda_terra {
-    top: 25;
-    right: 25;
+    top: 25px;
+    right: 25px;
     width: 3.5em;
     height: 3.5em;
 }
+
 /*A órbita da terra seria a classe da lua, mas agora é para as legendas*/
 .orbita_terra {
     top: 0;
@@ -380,10 +527,6 @@ legendas*/
     border-radius: 50%;
     transform: scale(2.5);
     transition: 0.8s;
-}
-/*Aqui eu defino que as legendas não tem opacidade*/
-.centro_lua, .centro_sol, .centro_terra, .ponta {
-    opacity: 0;
 }
 .centro_lua_invisivel, .centro_terra_invisivel {
     cursor: default !important;
