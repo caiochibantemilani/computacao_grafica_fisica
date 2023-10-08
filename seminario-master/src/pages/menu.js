@@ -40,7 +40,7 @@ function Menu(){
                     <img src={planets} className="tema_imagem" alt='vazio' onClick={() => window.location.href = '/game'}/> 
                     <div className="legenda ">Game</div>
                 </li>
-                <h2 className='h2'>Física aplicadas em JavaScript</h2>
+                <h2 className='h2'>Bibliografia</h2>
                 <hr className='.hr'></hr>
                 <li className="tema">
                     <img src={planets} alt='vazio' className="tema_imagem" onClick={() => window.location.href = '/sistemaSolar'}/> 
