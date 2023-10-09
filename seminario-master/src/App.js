@@ -23,7 +23,7 @@ function App() {
           <Route path="/NewtonCradle" element={<NewtonCradle/>}></Route>
           <Route path="/game" element={<MatterGame/>}></Route>
         </Routes>
-        
+         
     </BrowserRouter>
   );
 }
