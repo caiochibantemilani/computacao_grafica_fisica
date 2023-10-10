@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import './sistema_solar.css';
 
-function SistemaSolar(anterior = '') {
+function SistemaSolar() {
   const [gravity, setGravity] = useState('');
   const [planet, setPlanet] = useState('');
   const [isGrabbing, setIsGrabbing] = useState(false);
   const [zoomLevel, setZoomLevel] = useState(1);
 
-  function planeta_selecionado(event) {
-    let elementoId = event.target.id;
+  function planeta_selecionado(elementoId) {
     if (elementoId === 'orbita_terra') {
       elementoId = 'terra';
       setGravity(9.8);
@@ -56,10 +55,10 @@ function SistemaSolar(anterior = '') {
     content.style.transform = `scale(${zoomLevel})`;
   }
 
-    return(
-        <>
-            <div className="tela_dividida">
-                <div id="divirTela" className="geral_dividido">
+  return (
+    <>
+      <div className="tela_dividida">
+        <div  id="divirTela" className="geral_dividido" onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onWheel={handleWheel}>
                     <div className="sistema_solar">
                         <div id="sol" onClick={planeta_selecionado} className="sol">
                             <div className="legenda_sol">
@@ -77,28 +76,28 @@ function SistemaSolar(anterior = '') {
                             <div id="lua" className="lua">
                             </div>
                         </div>
-                        <div id="marte" class="marte">
+                        <div id="marte" className="marte">
                         </div>
-                        <div id="jupiter" class="jupiter">
+                        <div id="jupiter" className="jupiter">
                         </div>
-                        <div id="saturno" class="saturno">
-                            <div id="aneis" class="aneis">
+                        <div id="saturno" className="saturno">
+                            <div id="aneis" className="aneis">
                             </div>
                         </div>
-                        <div id="urano" class="urano">
+                        <div id="urano" className="urano">
                         </div>
-                        <div id="neptuno" class="neptuno">
+                        <div id="neptuno" className="neptuno">
                         </div>
-                        <div id="orbita_venus" class="orbita_venus">
-                                <div id="cliquevenus" onclick="planeta_selecionado('venus')" class="legenda_venus">
-                                    <div id="centro_venus" class="centro_venus">
+                        <div id="orbita_venus" className="orbita_venus">
+                                <div id="cliquevenus" onclick="planeta_selecionado('venus')" className="legenda_venus">
+                                    <div id="centro_venus" className="centro_venus">
                                         <div>venus</div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="orbita_mercurio" class="orbita_mercurio">
-                                <div id="cliquemercurio" onclick="planeta_selecionado('mercurio')" class="legenda_mercurio">
-                                    <div id="centro_mercurio" class="centro_mercurio">
+                            <div id="orbita_mercurio" className="orbita_mercurio">
+                                <div id="cliquemercurio" onclick="planeta_selecionado('mercurio')" className="legenda_mercurio">
+                                    <div id="centro_mercurio" className="centro_mercurio">
                                         <div>mercurio</div>
                                     </div>
                                 </div>
