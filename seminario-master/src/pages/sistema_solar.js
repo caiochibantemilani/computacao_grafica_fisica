@@ -128,7 +128,7 @@ function SistemaSolar(anterior='') {
                         </div>
                     </div>
                 </div>
-                <div id="contextoPlaneta" className='gravityName'>
+                <div id="contextoPlaneta" className='contexto gravityName'>
                     {planet ? <button className='simulacaobutton' onClick={() => {
                         setPlanet('')
                         setGravity('')
