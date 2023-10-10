@@ -56,15 +56,6 @@ function SistemaSolar(anterior = '') {
     content.style.transform = `scale(${zoomLevel})`;
   }
 
-  return (
-    <div id="divirTela" onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onWheel={handleWheel}>
-      {/* Seu conteúdo aqui */}
-    </div>
-  );
-}
-
-export default SistemaSolar;
-
     return(
         <>
             <div className="tela_dividida">
