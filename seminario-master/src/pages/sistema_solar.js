@@ -80,9 +80,9 @@ function SistemaSolar(anterior='') {
                 <div id="divirTela" className="geral_dividido" 
                     onMouseDown={handleMouseDown}
                     onMouseMove={handleMouseMove}
-                    onWheel={handleWheel}
                 >
-                    <div className="sistema_solar">
+                    <div className="sistema_solar"
+                        onWheel={handleWheel}>
                         <div id="sol" onClick={planeta_selecionado} className="sol">
                             <div className="legenda_sol">
                                 <div className="centro_sol">
