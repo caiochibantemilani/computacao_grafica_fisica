@@ -4,8 +4,24 @@ import './sistema_solar.css'
 import GravitySimulation from '../GravitySimulation';
 
 function SistemaSolar(anterior='') {
-    const [gravity, setGravity] = useState('')
-    const [planet,setPlanet] = useState('')
+    const [gravity, setGravity] = useState(9.8)
+    const [planet,setPlanet] = useState('terra')
+
+    function updateSimulation(new_planet) {
+        if (new_planet){
+            setPlanet('')
+            setTimeout(() => {
+            setPlanet(new_planet)
+        }, 0);
+        }else{
+            const prevPlanet = planet
+            setPlanet('')
+            setTimeout(() => {
+            setPlanet(prevPlanet)
+        }, 0);
+        }
+        
+    }
 
     function planeta_selecionado(event){
         let elementoId = event.target.id;
@@ -18,15 +34,14 @@ function SistemaSolar(anterior='') {
         }
         if(elementoId === 'sol'){
             setGravity(274)
+            updateSimulation(elementoId)
         }
         if(planet === elementoId){
             elementoId = ''
         }else if(planet !== ''){
             elementoId = ''
 
-        }
-        
-        setPlanet(elementoId)
+        }        
     }
     return(
         <>
@@ -129,10 +144,6 @@ function SistemaSolar(anterior='') {
                     </div>
                 </div>
                 <div id="contextoPlaneta" className='contexto gravityName'>
-                    {planet ? <button className='simulacaobutton' onClick={() => {
-                        setPlanet('')
-                        setGravity('')
-                    }}>X</button> : ''}
                     
                     <h1>{planet ? planet : ''}</h1>
                     {planet ? <GravitySimulation gravity={gravity} /> : ''}
