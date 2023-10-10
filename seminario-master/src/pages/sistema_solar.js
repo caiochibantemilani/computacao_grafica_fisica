@@ -6,6 +6,36 @@ import GravitySimulation from '../GravitySimulation';
 function SistemaSolar(anterior='') {
     const [gravity, setGravity] = useState(9.8)
     const [planet,setPlanet] = useState('terra')
+    const [isGrabbing, setIsGrabbing] = useState(false);
+    const [zoomLevel, setZoomLevel] = useState(1);
+
+    function handleMouseDown() {
+        setIsGrabbing(true);
+        document.addEventListener('mouseup', () => {
+          setIsGrabbing(false);
+        }, { once: true });
+      }
+    
+    function handleMouseMove(event) {
+        if (isGrabbing) {
+            const container = document.getElementById('divirTela');
+            container.scrollLeft -= event.movementX;
+            container.scrollTop -= event.movementY;
+        }
+    }
+
+    function handleWheel(event) {
+        event.preventDefault();
+        const content = document.querySelector('.geral_dividido');
+    
+        if (event.deltaY < 0) {
+          setZoomLevel(zoomLevel + 0.1); // Aumenta o zoom
+        } else {
+          setZoomLevel(zoomLevel - 0.1); // Diminui o zoom
+        }
+    
+        content.style.transform = `scale(${zoomLevel})`;
+    }
 
     function updateSimulation(new_planet) {
         if (new_planet){
@@ -46,7 +76,11 @@ function SistemaSolar(anterior='') {
     return(
         <>
             <div className="tela_dividida">
-                <div id="divirTela" className="geral_dividido">
+                <div id="divirTela" className="geral_dividido" 
+                    onMouseDown={handleMouseDown}
+                    onMouseMove={handleMouseMove}
+                    onWheel={handleWheel}
+                >
                     <div className="sistema_solar">
                         <div id="sol" onClick={planeta_selecionado} className="sol">
                             <div className="legenda_sol">
