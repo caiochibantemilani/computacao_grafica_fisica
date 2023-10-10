@@ -21,7 +21,7 @@ se transforma no "geral_dividido"*/
 .geral_dividido {
     position: fixed;
     left: 0;
-    width: 50%;
+    width: 70%;
     margin: 0;
     height: 100vh;
     display: flex;
@@ -40,7 +40,7 @@ se transforma no "geral_dividido"*/
     position: fixed;
     cursor: default;
     background-color: #222222;
-    width: 50%;
+    width: 30%;
     margin: 0;
     height: 100%;
     color: white;
