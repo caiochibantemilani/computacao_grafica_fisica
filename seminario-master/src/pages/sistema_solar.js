@@ -1,34 +1,34 @@
- import React, { useState } from 'react';
-import './sistema_solar.css';
+ import React from 'react';
+import { useState } from 'react';
+import './sistema_solar.css'
+import GravitySimulation from '../GravitySimulation';
 
-function SistemaSolar(anterior = '') {
-  const [gravity, setGravity] = useState('');
-  const [planet, setPlanet] = useState('');
-  const [isGrabbing, setIsGrabbing] = useState(false);
-  const [zoomLevel, setZoomLevel] = useState(1);
+function SistemaSolar(anterior='') {
+    const [gravity, setGravity] = useState('')
+    const [planet,setPlanet] = useState('')
 
-  function planeta_selecionado(event) {
-    let elementoId = event.target.id;
-    if (elementoId === 'orbita_terra') {
-      elementoId = 'terra';
-      setGravity(9.8);
-    }
-    if (elementoId === 'lua') {
-      setGravity(1.6);
-    }
-    if (elementoId === 'sol') {
-      setGravity(274);
-    }
-    if (planet === elementoId) {
-      elementoId = '';
-    } else if (planet !== '') {
-      elementoId = '';
-    }
+    function planeta_selecionado(event){
+        let elementoId = event.target.id;
+        if(elementoId === 'orbita_terra'){
+            elementoId = 'terra'
+            setGravity(9.8)
+        }
+        if(elementoId === 'lua'){
+            setGravity(1.6)
+        }
+        if(elementoId === 'sol'){
+            setGravity(274)
+        }
+        if(planet === elementoId){
+            elementoId = ''
+        }else if(planet !== ''){
+            elementoId = ''
 
-    setPlanet(elementoId);
-  }
+        }
 
-  function handleMouseDown() {
+        setPlanet(elementoId)
+    }
+      function handleMouseDown() {
     setIsGrabbing(true);
     document.addEventListener('mouseup', () => {
       setIsGrabbing(false);
@@ -55,7 +55,7 @@ function SistemaSolar(anterior = '') {
 
     content.style.transform = `scale(${zoomLevel})`;
   }
-
+ 
     return(
         <>
             <div className="tela_dividida">
