@@ -19,15 +19,25 @@ ou seja, tudo na mesma linha, estou colocando tbm, uma transição de 2 segundos
 /*Quando a tela fica dividida eu preciso que o tamanho e o sistema solar mudem, por isso que o geral 
 se transforma no "geral_dividido"*/
 .geral_dividido {
+    position: fixed;
+    left: 0;
     width: 50%;
     margin: 0;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    cursor: grab;
 }
+
+.geral_dividido:active {
+    cursor: grabbing;
+}
+
 /*Aqui estou definindo a parte dos textos, cor de fundo, o mouse, largura e assim vai*/
 .contexto {
+    position: fixed;
     cursor: default;
     background-color: #222222;
     width: 50%;
@@ -36,6 +46,7 @@ se transforma no "geral_dividido"*/
     color: white;
     padding: 10px 50px;
     border-radius: 50px;
+    right: 0;
 }
 /*Aqui estou definindo a parte dos textos, cor de fundo, o mouse, largura e assim vai*/
 .sistema_solar {
@@ -309,7 +320,7 @@ se transforma no "geral_dividido"*/
 }
 
 /*Aqui eu defino a velocidade contrária da legenda da terra*/
-.orbita_sol, .orbita_terra, .orbita_venus, .orbita_mercurio, .orbita_marte, .orbita_jupiter, .orbita_saturno, .orbita_urano, .orbita_neptuno, .legenda_neptuno, .legenda_urano, .legenda_saturno, .legenda_jupiter, .legenda_marte, .legenda_venus, .legenda_mercurio, .legenda_terra, .legenda_lua {
+.orbita_sol, .orbita_terra, .orbita_venus, .orbita_mercurio, .orbita_marte, .orbita_jupiter, .orbita_saturno, .orbita_urano, .orbita_neptuno, .universo, .legenda_neptuno, .legenda_urano, .legenda_saturno, .legenda_jupiter, .legenda_marte, .legenda_venus, .legenda_mercurio, .legenda_terra, .legenda_lua {
     position: absolute;
 }
 /*Estou definindo novamente as as órbitas, mas agora é para conseguir clicar e colocar 
@@ -373,6 +384,10 @@ legendas*/
     animation: orbita 200s linear infinite;
 }
 
+.universo {
+    width: 1000em;
+    height: 1000em;
+}
 
 /*Aqui eu crio o campo para passar o mouse para a terra*/
 .legenda_mercurio, .legenda_venus, .legenda_terra, .legenda_lua, .legenda_marte, .legenda_jupiter, .legenda_saturno, .legenda_urano, .legenda_neptuno {
