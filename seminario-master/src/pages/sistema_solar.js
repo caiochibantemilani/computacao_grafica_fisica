@@ -1,64 +1,70 @@
-import React from 'react';
-import { useState } from 'react';
-import './sistema_solar.css'
-import GravitySimulation from '../GravitySimulation';
+import React, { useState } from 'react';
+import './sistema_solar.css';
 
-function SistemaSolar(anterior='') {
-    const [gravity, setGravity] = useState('')
-    const [planet,setPlanet] = useState('')
+function SistemaSolar(anterior = '') {
+  const [gravity, setGravity] = useState('');
+  const [planet, setPlanet] = useState('');
+  const [isGrabbing, setIsGrabbing] = useState(false);
+  const [zoomLevel, setZoomLevel] = useState(1);
 
-    function planeta_selecionado(event){
-        let elementoId = event.target.id;
-        if(elementoId === 'orbita_terra'){
-            elementoId = 'terra'
-            setGravity(9.8)
-        }
-        if(elementoId === 'lua'){
-            setGravity(1.6)
-        }
-        if(elementoId === 'sol'){
-            setGravity(274)
-        }
-        if(planet === elementoId){
-            elementoId = ''
-        }else if(planet !== ''){
-            elementoId = ''
-
-        }
-
-        setPlanet(elementoId)
+  function planeta_selecionado(event) {
+    let elementoId = event.target.id;
+    if (elementoId === 'orbita_terra') {
+      elementoId = 'terra';
+      setGravity(9.8);
     }
-    let isGrabbing = false;
+    if (elementoId === 'lua') {
+      setGravity(1.6);
+    }
+    if (elementoId === 'sol') {
+      setGravity(274);
+    }
+    if (planet === elementoId) {
+      elementoId = '';
+    } else if (planet !== '') {
+      elementoId = '';
+    }
 
-        document.getElementById('divirTela').addEventListener('mousedown', () => {
-            isGrabbing = true;
-            document.addEventListener('mouseup', () => {
-                isGrabbing = false;
-            }, { once: true });
-        });
+    setPlanet(elementoId);
+  }
 
-        document.getElementById('divirTela').addEventListener('mousemove', (event) => {
-            if (isGrabbing) {
-                const container = document.getElementById('divirTela');
-                container.scrollLeft -= event.movementX; // Alteração aqui: subtraímos em vez de somar
-                container.scrollTop -= event.movementY;
-            }
-        });
-        
-        let zoomLevel = 1;
+  function handleMouseDown() {
+    setIsGrabbing(true);
+    document.addEventListener('mouseup', () => {
+      setIsGrabbing(false);
+    }, { once: true });
+  }
 
-        document.getElementById('divirTela').addEventListener('wheel', (event) => {
-            event.preventDefault();
-            const content = document.querySelector('.geral_dividido');
-        
-            if (event.deltaY < 0) {
-                zoomLevel += 0.1; // Aumenta o zoom
-            } else {
-                zoomLevel -= 0.1; // Diminui o zoom
-            }
-        
-            content.style.transform = `scale(${zoomLevel})`;
-        });
+  function handleMouseMove(event) {
+    if (isGrabbing) {
+      const container = document.getElementById('divirTela');
+      container.scrollLeft -= event.movementX;
+      container.scrollTop -= event.movementY;
+    }
+  }
+
+  function handleWheel(event) {
+    event.preventDefault();
+    const content = document.querySelector('.geral_dividido');
+
+    if (event.deltaY < 0) {
+      setZoomLevel(prevZoomLevel => prevZoomLevel + 0.1);
+    } else {
+      setZoomLevel(prevZoomLevel => prevZoomLevel - 0.1);
+    }
+
+    content.style.transform = `scale(${zoomLevel})`;
+  }
+
+  return (
+    <div id="divirTela" onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onWheel={handleWheel}>
+      {/* Seu conteúdo aqui */}
+    </div>
+  );
+}
+
+export default SistemaSolar;
+
     return(
         <>
             <div className="tela_dividida">
