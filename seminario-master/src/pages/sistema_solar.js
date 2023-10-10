@@ -28,6 +28,37 @@ function SistemaSolar(anterior='') {
 
         setPlanet(elementoId)
     }
+    let isGrabbing = false;
+
+        document.getElementById('divirTela').addEventListener('mousedown', () => {
+            isGrabbing = true;
+            document.addEventListener('mouseup', () => {
+                isGrabbing = false;
+            }, { once: true });
+        });
+
+        document.getElementById('divirTela').addEventListener('mousemove', (event) => {
+            if (isGrabbing) {
+                const container = document.getElementById('divirTela');
+                container.scrollLeft -= event.movementX; // Alteração aqui: subtraímos em vez de somar
+                container.scrollTop -= event.movementY;
+            }
+        });
+        
+        let zoomLevel = 1;
+
+        document.getElementById('divirTela').addEventListener('wheel', (event) => {
+            event.preventDefault();
+            const content = document.querySelector('.geral_dividido');
+        
+            if (event.deltaY < 0) {
+                zoomLevel += 0.1; // Aumenta o zoom
+            } else {
+                zoomLevel -= 0.1; // Diminui o zoom
+            }
+        
+            content.style.transform = `scale(${zoomLevel})`;
+        });
     return(
         <>
             <div className="tela_dividida">
@@ -123,6 +154,8 @@ function SistemaSolar(anterior='') {
                                     <div>neptuno</div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="universo">
                         </div>
                     </div>
                 </div>
