@@ -26,12 +26,13 @@ function SistemaSolar(anterior='') {
 
     function handleWheel(event) {
         event.preventDefault();
-        const content = document.querySelector('.geral_dividido');
+        const content = document.querySelector('.sistema_solar');
     
         if (event.deltaY < 0) {
-          setZoomLevel(zoomLevel + 0.1); // Aumenta o zoom
-        } else {
-          setZoomLevel(zoomLevel - 0.1); // Diminui o zoom
+            zoomLevel += 0.1; // Aumenta o zoom
+        } 
+        if (zoomLevel >0.2 && event.deltaY > 0) {
+            zoomLevel -= 0.1; // Diminui o zoom
         }
     
         content.style.transform = `scale(${zoomLevel})`;
