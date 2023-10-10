@@ -25,36 +25,35 @@ function SistemaSolar(anterior='') {
             elementoId = ''
 
         }
-
+         function handleMouseDown() {
+            setIsGrabbing(true);
+            document.addEventListener('mouseup', () => {
+              setIsGrabbing(false);
+            }, { once: true });
+          }
+          
+          function handleMouseMove(event) {
+            if (isGrabbing) {
+              const container = document.getElementById('divirTela');
+              container.scrollLeft -= event.movementX;
+              container.scrollTop -= event.movementY;
+            }
+          }
+          
+          function handleWheel(event) {
+            event.preventDefault();
+            const content = document.querySelector('.geral_dividido');
+        
+            if (event.deltaY < 0) {
+              setZoomLevel(prevZoomLevel => prevZoomLevel + 0.1);
+            } else {
+              setZoomLevel(prevZoomLevel => prevZoomLevel - 0.1);
+            }
+        
+            content.style.transform = `scale(${zoomLevel})`;
+          }
         setPlanet(elementoId)
     }
-  function handleMouseDown() {
-    setIsGrabbing(true);
-    document.addEventListener('mouseup', () => {
-      setIsGrabbing(false);
-    }, { once: true });
-  }
-  
-  function handleMouseMove(event) {
-    if (isGrabbing) {
-      const container = document.getElementById('divirTela');
-      container.scrollLeft -= event.movementX;
-      container.scrollTop -= event.movementY;
-    }
-  }
-  
-  function handleWheel(event) {
-    event.preventDefault();
-    const content = document.querySelector('.geral_dividido');
-
-    if (event.deltaY < 0) {
-      setZoomLevel(prevZoomLevel => prevZoomLevel + 0.1);
-    } else {
-      setZoomLevel(prevZoomLevel => prevZoomLevel - 0.1);
-    }
-
-    content.style.transform = `scale(${zoomLevel})`;
-  }
     return(
         <>
             <div className="tela_dividida">
