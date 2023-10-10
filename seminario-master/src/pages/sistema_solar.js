@@ -62,7 +62,7 @@ function SistemaSolar(anterior='') {
     return(
         <>
             <div className="tela_dividida">
-                <div id="divirTela" className="geral">
+                <div id="divirTela" className="geral_dividido">
                     <div className="sistema_solar">
                         <div id="sol" onClick={planeta_selecionado} className="sol">
                             <div className="legenda_sol">
