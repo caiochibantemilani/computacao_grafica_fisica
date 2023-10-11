@@ -26,7 +26,7 @@ function SistemaSolar(anterior='') {
 
     function handleWheel(event) {
         event.preventDefault();
-        const content = document.querySelector('.sistema_solar');
+        const content = document.querySelector('#sistema_solar_universo');
     
         if (event.deltaY < 0) {
             zoomLevel += 0.1; // Aumenta o zoom
@@ -82,7 +82,7 @@ function SistemaSolar(anterior='') {
                     onMouseMove={handleMouseMove}
                     onWheel={handleWheel}
                 >
-                    <div className="sistema_solar">
+                    <div id="sistema_solar_universo" className="sistema_solar">
                         <div id="sol" onClick={planeta_selecionado} className="sol">
                             <div className="legenda_sol">
                                 <div className="centro_sol">
