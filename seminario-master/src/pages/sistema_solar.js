@@ -7,7 +7,7 @@ function SistemaSolar(anterior='') {
     const [gravity, setGravity] = useState(9.8)
     const [planet,setPlanet] = useState('terra')
     const [isGrabbing, setIsGrabbing] = useState(false);
-    const [zoomLevel, setZoomLevel] = useState(1);
+    let [zoomLevel, setZoomLevel] = useState(1);
 
     function handleMouseDown() {
         setIsGrabbing(true);
