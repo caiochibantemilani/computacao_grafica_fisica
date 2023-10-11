@@ -29,10 +29,10 @@ function SistemaSolar(anterior='') {
         const content = document.querySelector('#sistema_solar_universo');
     
         if (event.deltaY < 0) {
-            zoomLevel += 0.1; // Aumenta o zoom
+            setZoomLevel(zoomLevel += 0.1); // Aumenta o zoom
         } 
         if (zoomLevel >0.2 && event.deltaY > 0) {
-            zoomLevel -= 0.1; // Diminui o zoom
+            setZoomLevel(zoomLevel -= 0.1); // Diminui o zoom
         }
     
         content.style.transform = `scale(${zoomLevel})`;
