@@ -81,6 +81,12 @@ function SistemaSolar(anterior='') {
                     onMouseMove={handleMouseMove}
                     onWheel={handleWheel}
                 >
+                    <div classname="instrucoes">        
+                        <div classname="instrucao_esquerda">Use o mouse para se locomover pelo universo<span classname="material-symbols-outlined" style="
+                            padding: 0 0 0 5px;">pinch</span></div>
+                        <div classname="instrucao_direita">Para dar zoom use o scroll do mouse<span classname="material-symbols-outlined" style="
+                            padding: 0 0 0 5px;">zoom_in</span></div>
+                        </div>
                     <div id="sistema_solar_universo" className="sistema_solar">
                         <div id="sol" onClick={planeta_selecionado} className="sol">
                             <div className="legenda_sol">
