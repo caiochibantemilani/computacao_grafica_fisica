@@ -88,8 +88,8 @@ function SistemaSolar(anterior='') {
                     onWheel={handleWheel}
                 >
                     <div className="instrucoes">        
-                        <div className="instrucao_esquerda">Use o mouse para se locomover pelo universo<span classname="icon"><BsArrowsMove/></span></div>
-                        <div className="instrucao_direita">Para dar zoom use o scroll do mouse<span classname="icon"><BsZoomIn/></span></div>
+                        <div className="instrucao_esquerda">Use o mouse para se locomover pelo universo<span className="icon"><BsArrowsMove/></span></div>
+                        <div className="instrucao_direita">Para dar zoom use o scroll do mouse<span className="icon"><BsZoomIn/></span></div>
                         </div>
                     <div id="sistema_solar_universo" className="sistema_solar">
                         <div id="sol" className="sol">
