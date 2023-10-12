@@ -4,7 +4,7 @@ import './sistema_solar.css'
 import GravitySimulation from '../GravitySimulation';
 import { BsArrowsMove } from 'react-icons/bs';
 import { BsZoomIn } from 'react-icons/bs';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 function SistemaSolar(anterior='') {
     const [gravity, setGravity] = useState(9.8)
