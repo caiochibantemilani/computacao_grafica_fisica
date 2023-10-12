@@ -110,7 +110,7 @@ function SistemaSolar(anterior='') {
                         </div>
                     <div id="sistema_solar_universo" className="sistema_solar">
                         <div id="sol" className="sol" onClick={planeta_selecionado}>
-                            <div className="legenda_sol">
+                            <div className="legenda_sol" >
                                 <div id="solClick" className="centro_sol">
                                 </div>
                                 <div className="ponta"></div>
@@ -118,23 +118,23 @@ function SistemaSolar(anterior='') {
                         </div>
                         <div id="mercurio"className="mercurio" onClick={planeta_selecionado}>
                         </div>
-                        <div id="venus" className="venus">
+                        <div id="venus" className="venus" onClick={planeta_selecionado}>
                         </div>
-                        <div id="terra" className="terra">
+                        <div id="terra" className="terra" onClick={planeta_selecionado}>
                             <div id="lua" className="lua">
                             </div>
                         </div>
-                        <div id="marte" className="marte">
+                        <div id="marte" className="marte" onClick={planeta_selecionado}>
                         </div>
-                        <div id="jupiter" className="jupiter">
+                        <div id="jupiter" className="jupiter" onClick={planeta_selecionado}>
                         </div>
-                        <div id="saturno" className="saturno">
+                        <div id="saturno" className="saturno" onClick={planeta_selecionado}>
                             <div id="aneis" className="aneis">
                             </div>
                         </div>
-                        <div className="urano">
+                        <div className="urano" id="urano" onClick={planeta_selecionado}>
                         </div>
-                        <div id="neptuno" className="neptuno">
+                        <div id="netuno" className="neptuno" onClick={planeta_selecionado}>
                         </div>
                         <div id="orbita_venus" className="orbita_venus">
                                 <div id="cliquevenus" onClick="planeta_selecionado('venus')" className="legenda_venus">
@@ -179,7 +179,7 @@ function SistemaSolar(anterior='') {
                             </div>
                         </div>
                         <div id="orbita_urano" className="orbita_urano">
-                            <div id="urano" onClick={planeta_selecionado} className="legenda_urano">
+                            <div id="urano" className="legenda_urano">
                                 <div id="centro_urano" className="centro_urano">
                                 </div>
                             </div>
