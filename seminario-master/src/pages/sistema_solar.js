@@ -2,6 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import './sistema_solar.css'
 import GravitySimulation from '../GravitySimulation';
+import { BsArrowsMove } from 'react-icons/bs';
+import { BsZoomIn } from 'react-icons/bs';
 
 function SistemaSolar(anterior='') {
     const [gravity, setGravity] = useState(9.8)
@@ -86,8 +88,8 @@ function SistemaSolar(anterior='') {
                     onWheel={handleWheel}
                 >
                     <div className="instrucoes">        
-                        <div className="instrucao_esquerda">Use o mouse para se locomover pelo universo<span classname="material-symbols-outlined">pinch</span></div>
-                        <div className="instrucao_direita">Para dar zoom use o scroll do mouse<span classname="material-symbols-outlined">zoom_in</span></div>
+                        <div className="instrucao_esquerda">Use o mouse para se locomover pelo universo<span classname="icon"><BsArrowsMove/></span></div>
+                        <div className="instrucao_direita">Para dar zoom use o scroll do mouse<span classname="icon"><BsZoomIn/></span></div>
                         </div>
                     <div id="sistema_solar_universo" className="sistema_solar">
                         <div id="sol" className="sol">
@@ -168,6 +170,7 @@ function SistemaSolar(anterior='') {
                         <div id="orbita_neptuno" className="orbita_neptuno">
                             <div id="cliqueneptuno" onClick="planeta_selecionado('neptuno')" className="legenda_neptuno">
                                 <div id="centro_neptuno" className="centro_neptuno">
+
                                 </div>
                             </div>
                         </div>
