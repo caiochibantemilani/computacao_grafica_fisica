@@ -141,62 +141,68 @@ se transforma no "geral_dividido"*/
 
 /*Aqui eu defino como é a órbita da lua*/
 .lua {
-    top: 0;
-    right: 0;
-    width: 8em;
-    height: 8em;
+    top: 65px;
+    right: 15px;
+    width: 5em;
+    height: 5em;
     animation: orbita 10s linear infinite;
-    z-index: 6;
+    z-index: 0;
 }
 
 .marte {
-    top: -9.5em;
-    width: 62em;
-    height: 62em;
+    top: -11.5em;
+    width: 68em;
+    height: 68em;
     animation: orbita 60s linear infinite;
     z-index: 5;
 }
 
 .jupiter {
-    top: -22.5em;
-    width: 85em;
-    height: 85em;
+    top: -27.5em;
+    width: 100em;
+    height: 100em;
     animation: orbita 85s linear infinite;
     z-index: 4;
 }
 
 .saturno {
-    top: -40em;
-    width: 120em;
-    height: 120em;
+    top: -53.5em;
+    width: 150em;
+    height: 150em;
     animation: orbita 110s linear infinite;
     z-index: 3;
 }
 
 .aneis {
-    right: 60px;
-    top: 74px;
+    position: absolute;
+    border-style: solid;
+    border-color: #ffe34144;
+    border-width: 0.8em 0.8em 0.8em 0.8em;
+    border-radius: 50%;
+    z-index: 10;
+    right: 68px;
+    top: 291px;
     width: 10em;
     height: 10em;
     animation: orbita 10s linear infinite;
+    z-index: 0;
 }
 
 .urano {
-    top: -65.5em;
-    width: 170em;
-    height: 170em;
+    top: -89.5em;
+    width: 220em;
+    height: 220em;
     animation: orbita 150s linear infinite;
     z-index: 2;
 }
 
 .neptuno {
-    top: -97em;
-    width: 230em;
-    height: 230em;
+    top: -141.5em;
+    width: 325em;
+    height: 325em;
     animation: orbita 200s linear infinite;
     z-index: 1;
 }
-
 
 /*Aqui eu começo a fazer as bolinhas, que mais para frente vão virar nossos planetinhas*/
 .mercurio::before, .venus::before, .terra::before, .lua::before, .marte::before, .jupiter::before, .saturno::before, .urano::before, .neptuno::before {
@@ -214,7 +220,7 @@ se transforma no "geral_dividido"*/
 }
 
 .venus::before {
-    top: 2em;
+    top: 4em;
     right: 1.5em;
     width: 2.5em;
     height: 2.5em;
@@ -223,7 +229,7 @@ se transforma no "geral_dividido"*/
 
 /*Aqui eu crio a terra*/
 .terra::before {
-    top: 2.8em;
+    top: 7.8em;
     right: 2.8em;
     width: 2.7em;
     height: 2.7em;
@@ -231,7 +237,7 @@ se transforma no "geral_dividido"*/
 }
 /*Aqui eu crio a lua*/
 .lua::before {
-    top: 0.8em;
+    top: -0.2em;
     right: 0.8em;
     width: 0.8em;
     height: 0.8em;
@@ -239,7 +245,7 @@ se transforma no "geral_dividido"*/
 }
 
 .marte::before {
-    top: 6em;
+    top: 14.2em;
     right: 5em;
     width: 1.4em;
     height: 1.4em;
@@ -247,7 +253,7 @@ se transforma no "geral_dividido"*/
 }
 
 .jupiter::before {
-    top: 3em;
+    top: 18em;
     right: 6em;
     width: 7em;
     height: 7em;
@@ -255,7 +261,7 @@ se transforma no "geral_dividido"*/
 }
 
 .saturno::before {
-    top: 11em;
+    top: 32.2em;
     right: 10em;
     width: 4em;
     height: 4em;
@@ -263,7 +269,7 @@ se transforma no "geral_dividido"*/
 }
 
 .urano::before {
-    top: 14em;
+    top: 54em;
     right: 11em;
     width: 5.5em;
     height: 5.5em;
@@ -271,13 +277,12 @@ se transforma no "geral_dividido"*/
 }
 
 .neptuno::before {
-    top: 17em;
+    top: 82em;
     right: 17em;
     width: 5.5em;
     height: 5.5em;
     background-color: darkblue;
 }
-
 
 /*Uma variável em CSS, vou usar ela pra fazer as órbitas*/
 @keyframes orbita {
@@ -369,7 +374,7 @@ se transforma no "geral_dividido"*/
 }
 
 .centro_urano {
-    margin: 40px 30px;
+    margin: 40px 60px;
     animation: orbita-inversa 150s linear infinite;
 }
 
@@ -393,70 +398,69 @@ se transforma no "geral_dividido"*/
 /*Estou definindo novamente as as órbitas, mas agora é para conseguir clicar e colocar 
 legendas*/
 .orbita_sol {
-    top: 5em;
-    left: 5em;
-    width: 30em;
-    height: 30em;
+    top: -1.5em;
+    left: -2.5em;
+    width: 45em;
+    height: 45em;
     animation: orbita 50s linear infinite;
-    z-index: 8;
-}
-
-.orbita_venus {
-    top: 10em;
-    width: 20em;
-    height: 20em;
-    animation: orbita 15s linear infinite;
-    z-index: 7;
+    z-index: 0;
 }
 
 .orbita_mercurio {
-    top: 13em;
+    top: 12.5em;
     width: 15em;
     height: 15em;
     animation: orbita 10s linear infinite;
-    z-index: 6;
+    z-index: 0;
 }
 
+.orbita_venus {
+    top: 7.5em;
+    width: 27em;
+    height: 27em;
+    animation: orbita 15s linear infinite;
+    z-index: 0;
+}
 
 .orbita_marte {
-    top: -1em;
-    width: 45em;
-    height: 45em;
+    top: -11.5em;
+    width: 68em;
+    height: 68em;
     animation: orbita 60s linear infinite;
-    z-index: 5;
+    z-index: 0;
 }
 
 .orbita_jupiter {
-    top: -7em;
-    width: 57em;
-    height: 57em;
+    top: -27.5em;
+    width: 100em;
+    height: 100em;
     animation: orbita 85s linear infinite;
-    z-index: 4;
+    z-index: 0;
 }
 
 .orbita_saturno {
-    top: -25em;
-    width: 85em;
-    height: 85em;
+    top: -53.5em;
+    width: 150em;
+    height: 150em;
     animation: orbita 110s linear infinite;
-    z-index: 3;
+    z-index: 0;
 }
 
 
 .orbita_urano {
-    top: -35em;
-    width: 110em;
-    height: 110em;
+    top: -89.5em;
+    width: 220em;
+    height: 220em;
     animation: orbita 150s linear infinite;
-    z-index: 2;
+    z-index: 0;
 }
 
 .orbita_neptuno {
-    top: -45em;
-    width: 140em;
-    height: 140em;
+    top: -141.5em;
+    width: 325em;
+    height: 325em;
     animation: orbita 200s linear infinite;
-    z-index: 1;
+    z-index: 0;
 }
 
 .universo {
@@ -471,85 +475,88 @@ legendas*/
     z-index: 100;
     cursor: pointer;
 }
-.legenda_terra_invisivel, .legenda_lua_invisivel {
-    cursor: default;
+.legenda_mercurio {
+    cursor: pointer;
+    top: 1.3em;
+    right: 2em;
+    width: 1em;
+    height: 1em;
+    z-index: 9;
 }
 
 .legenda_venus {
     cursor: pointer;
-    top: 20px;
-    right: 12px;
-    width: 3em;
-    height: 3em;
-}
-
-.legenda_mercurio {
-    cursor: pointer;
-    top: 14px;
-    right: 16px;
-    width: 1.5em;
-    height: 1.5em;
-}
-
-.legenda_marte {
-    cursor: pointer;
-    top: 57px;
-    right: 44px;
+    top: 4em;
+    right: 1.5em;
     width: 2.5em;
     height: 2.5em;
-}
-
-.legenda_jupiter {
-    cursor: pointer;
-    top: 29px;
-    right: 59px;
-    width: 7.5em;
-    height: 7.5em;
-}
-
-.legenda_saturno {
-    cursor: pointer;
-    top: 98px;
-    right: 87px;
-    width: 6.5em;
-    height: 6.5em;
-}
-
-.legenda_urano {
-    cursor: pointer;
-    top: 143px;
-    right: 111px;
-    width: 5.5em;
-    height: 5.5em;
-}
-
-.legenda_neptuno {
-    cursor: pointer;
-    top: 173px;
-    right: 170px;
-    width: 5.5em;
-    height: 5.5em;
+    z-index: 8;
 }
 
 /*Aqui eu crio o campo para passar o mouse para a terra*/
 .legenda_terra {
-    top: 25px;
-    right: 25px;
-    width: 3.5em;
-    height: 3.5em;
+    top: 7.8em;
+    right: 2.8em;
+    width: 2.7em;
+    height: 2.7em;
+    z-index: 7;
+}
+
+.legenda_marte {
+    cursor: pointer;
+    top: 14.2em;
+    right: 5em;
+    width: 1.4em;
+    height: 1.4em;
+    z-index: 5;
+}
+
+.legenda_jupiter {
+    cursor: pointer;
+    top: 18em;
+    right: 6em;
+    width: 7em;
+    height: 7em;
+}
+
+.legenda_saturno {
+    cursor: pointer;
+    top: 32.2em;
+    right: 10em;
+    width: 4em;
+    height: 4em;
+    z-index: 3;
+}
+
+.legenda_urano {
+    cursor: pointer;
+    top: 54em;
+    right: 11em;
+    width: 5.5em;
+    height: 5.5em;
+    z-index: 2;
+}
+
+.legenda_neptuno {
+    cursor: pointer;
+    top: 82em;
+    right: 17em;
+    width: 5.5em;
+    height: 5.5em;
+    z-index: 1;
 }
 
 /*A órbita da terra seria a classe da lua, mas agora é para as legendas*/
 .orbita_terra {
-    top: 0;
-    right: 0;
-    width: 8em;
-    height: 8em;
+    top: 65px;
+    right: 15px;
+    width: 5em;
+    height: 5em;
     animation: orbita 10s linear infinite;
 }
 /*Aqui eu crio a legenda para a lua*/
 .legenda_lua {
-    top: 5px;
+    top: -0.2em;
     right: 4px;
     width: 1.5em;
     height: 1.5em;
