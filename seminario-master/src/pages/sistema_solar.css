@@ -35,6 +35,29 @@ se transforma no "geral_dividido"*/
     cursor: grabbing;
 }
 
+.instrucoes {
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+    padding-top: 5px;
+}
+
+.instrucao_esquerda {
+    top: 0;
+    color: white;
+    left: 250px;
+    display: flex;
+}
+
+.instrucao_direita {
+    top: 0;
+    color: white;
+    left: 650px;
+    display: flex;
+}
+
 /*Aqui estou definindo a parte dos textos, cor de fundo, o mouse, largura e assim vai*/
 .contexto {
     position: fixed;
