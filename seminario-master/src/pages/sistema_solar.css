@@ -137,7 +137,7 @@ se transforma no "geral_dividido"*/
     width: 45em;
     height: 45em;
     animation: orbita 50s linear infinite;
-    z-index: 10000000;
+    z-index: 7;
 }
 
 /*Aqui eu defino como é a órbita da lua*/
