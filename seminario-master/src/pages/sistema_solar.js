@@ -25,7 +25,6 @@ function SistemaSolar(anterior='') {
     }
 
     function handleWheel(event) {
-        event.preventDefault();
         const content = document.querySelector('#sistema_solar_universo');
     
         if (event.deltaY < 0) {
@@ -112,14 +111,14 @@ function SistemaSolar(anterior='') {
                         <div id="neptuno" className="neptuno">
                         </div>
                         <div id="orbita_venus" className="orbita_venus">
-                                <div id="cliquevenus" onclick="planeta_selecionado('venus')" className="legenda_venus">
+                                <div id="cliquevenus" onClick="planeta_selecionado('venus')" className="legenda_venus">
                                     <div id="centro_venus" className="centro_venus">
                                         <div>venus</div>
                                     </div>
                                 </div>
                             </div>
                             <div id="orbita_mercurio" className="orbita_mercurio">
-                                <div id="cliquemercurio" onclick="planeta_selecionado('mercurio')" className="legenda_mercurio">
+                                <div id="cliquemercurio" onClick="planeta_selecionado('mercurio')" className="legenda_mercurio">
                                     <div id="centro_mercurio" className="centro_mercurio">
                                         <div>mercurio</div>
                                     </div>
@@ -139,42 +138,42 @@ function SistemaSolar(anterior='') {
                                 </div>
                             </div>
                         </div>
-                        <div id="orbita_marte" class="orbita_marte">
-                            <div id="cliquemarte" onclick="planeta_selecionado('marte')" class="legenda_marte">
-                                <div id="centro_marte" class="centro_marte">
+                        <div id="orbita_marte" className="orbita_marte">
+                            <div id="cliquemarte" onClick="planeta_selecionado('marte')" className="legenda_marte">
+                                <div id="centro_marte" className="centro_marte">
                                     <div>marte</div>
                                 </div>
                             </div>
                         </div>
-                        <div id="orbita_jupiter" class="orbita_jupiter">
-                            <div id="cliquejupiter" onclick="planeta_selecionado('jupiter')" class="legenda_jupiter">
-                                <div id="centro_jupiter" class="centro_jupiter">
+                        <div id="orbita_jupiter" className="orbita_jupiter">
+                            <div id="cliquejupiter" onClick="planeta_selecionado('jupiter')" className="legenda_jupiter">
+                                <div id="centro_jupiter" className="centro_jupiter">
                                     <div>jupiter</div>
                                 </div>
                             </div>
                         </div>
-                        <div id="orbita_saturno" class="orbita_saturno">
-                            <div id="cliquesaturno" onclick="planeta_selecionado('saturno')" class="legenda_saturno">
-                                <div id="centro_saturno" class="centro_saturno">
+                        <div id="orbita_saturno" className="orbita_saturno">
+                            <div id="cliquesaturno" onClick="planeta_selecionado('saturno')" className="legenda_saturno">
+                                <div id="centro_saturno" className="centro_saturno">
                                     <div>saturno</div>
                                 </div>
                             </div>
                         </div>
-                        <div id="orbita_urano" class="orbita_urano">
-                            <div id="cliqueurano" onclick="planeta_selecionado('urano')" class="legenda_urano">
-                                <div id="centro_urano" class="centro_urano">
+                        <div id="orbita_urano" className="orbita_urano">
+                            <div id="cliqueurano" onClick="planeta_selecionado('urano')" className="legenda_urano">
+                                <div id="centro_urano" className="centro_urano">
                                     <div>urano</div>
                                 </div>
                             </div>
                         </div>
-                        <div id="orbita_neptuno" class="orbita_neptuno">
-                            <div id="cliqueneptuno" onclick="planeta_selecionado('neptuno')" class="legenda_neptuno">
-                                <div id="centro_neptuno" class="centro_neptuno">
+                        <div id="orbita_neptuno" className="orbita_neptuno">
+                            <div id="cliqueneptuno" onClick="planeta_selecionado('neptuno')" className="legenda_neptuno">
+                                <div id="centro_neptuno" className="centro_neptuno">
                                     <div>neptuno</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="universo">
+                        <div className="universo">
                         </div>
                     </div>
                 </div>
