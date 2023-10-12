@@ -437,22 +437,26 @@ legendas*/
 
 
 .orbita_urano {
+    animation: orbita 150s linear infinite;
+    height: 110em;
     top: -35em;
     width: 110em;
-    height: 110em;
-    animation: orbita 150s linear infinite;
+    z-index: 3;
 }
 
 .orbita_neptuno {
+    animation: orbita 200s linear infinite;
+    height: 140em;
     top: -45em;
     width: 140em;
-    height: 140em;
-    animation: orbita 200s linear infinite;
+    z-index: 2;
 }
 
 .universo {
-    width: 1000em;
     height: 1000em;
+    width: 1000em;
+    z-index: 1;
+    top: -500em;
 }
 
 /*Aqui eu crio o campo para passar o mouse para a terra*/
