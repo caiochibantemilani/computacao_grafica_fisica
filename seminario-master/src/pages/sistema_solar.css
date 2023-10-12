@@ -84,6 +84,8 @@ se transforma no "geral_dividido"*/
     display: flex;
     flex-direction: column;
     align-items: center;
+    top: 2000px;
+    left: 2000px;
 }
 /*Aqui, bom, é literalmente o meu sol, tô declarando como ele é*/
 .sol {
@@ -99,7 +101,6 @@ se transforma no "geral_dividido"*/
     background-color: yellow;
     border-radius: 50%;
     box-shadow: 0 0 3em white;
-    transition: 0.8s;
 }
 
 
@@ -614,7 +615,6 @@ legendas*/
     background-color: aqua;
     border-radius: 50%;
     transform: scale(2.5);
-    transition: 0.8s;
 }
 /*Quando eu clico na lua, a clase se transforma nessa, que faz ele crescer*/
 .crescer_lua {
@@ -630,7 +630,6 @@ legendas*/
     background-color: silver;
     border-radius: 50%;
     transform: scale(2.5);
-    transition: 0.8s;
 }
 .centro_lua_invisivel, .centro_terra_invisivel {
     cursor: default !important;
