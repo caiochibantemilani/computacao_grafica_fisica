@@ -114,7 +114,7 @@ se transforma no "geral_dividido"*/
 }
 
 .mercurio {
-    top: 13em;
+    top: 12.5em;
     width: 15em;
     height: 15em;
     animation: orbita 10s linear infinite;
@@ -122,19 +122,19 @@ se transforma no "geral_dividido"*/
 }
 
 .venus {
-    top: 10em;
-    width: 20em;
-    height: 20em;
+    top: 7.5em;
+    width: 27em;
+    height: 27em;
     animation: orbita 15s linear infinite;
     z-index: 8;
 }
 
 /*Aqui eu defino como é a órbita da terra*/
 .terra {
-    top: 5em;
-    left: 5em;
-    width: 30em;
-    height: 30em;
+    top: -1.5em;
+    left: -2.5em;
+    width: 45em;
+    height: 45em;
     animation: orbita 50s linear infinite;
     z-index: 7;
 }
@@ -150,35 +150,30 @@ se transforma no "geral_dividido"*/
 }
 
 .marte {
-    top: -1em;
-    width: 45em;
-    height: 45em;
+    top: -9.5em;
+    width: 62em;
+    height: 62em;
     animation: orbita 60s linear infinite;
     z-index: 5;
 }
 
 .jupiter {
-    top: -7em;
-    width: 57em;
-    height: 57em;
+    top: -22.5em;
+    width: 85em;
+    height: 85em;
     animation: orbita 85s linear infinite;
     z-index: 4;
 }
 
 .saturno {
-    top: -25em;
-    width: 85em;
-    height: 85em;
+    top: -40em;
+    width: 120em;
+    height: 120em;
     animation: orbita 110s linear infinite;
     z-index: 3;
 }
 
 .aneis {
-    position: absolute;
-    border-style: solid;
-    border-color: #ffe34144;
-    border-width: 0.8em 0.8em 0.8em 0.8em;
-    border-radius: 50%;
     right: 60px;
     top: 74px;
     width: 10em;
@@ -187,17 +182,17 @@ se transforma no "geral_dividido"*/
 }
 
 .urano {
-    top: -35em;
-    width: 110em;
-    height: 110em;
+    top: -65.5em;
+    width: 170em;
+    height: 170em;
     animation: orbita 150s linear infinite;
     z-index: 2;
 }
 
 .neptuno {
-    top: -45em;
-    width: 140em;
-    height: 140em;
+    top: -97em;
+    width: 230em;
+    height: 230em;
     animation: orbita 200s linear infinite;
     z-index: 1;
 }
@@ -449,25 +444,24 @@ legendas*/
 
 
 .orbita_urano {
-    animation: orbita 150s linear infinite;
-    height: 110em;
     top: -35em;
     width: 110em;
+    height: 110em;
+    animation: orbita 150s linear infinite;
     z-index: 2;
 }
 
 .orbita_neptuno {
-    animation: orbita 200s linear infinite;
-    height: 140em;
     top: -45em;
     width: 140em;
+    height: 140em;
+    animation: orbita 200s linear infinite;
     z-index: 1;
 }
 
 .universo {
     height: 1000em;
     width: 1000em;
-    z-index: 1;
     top: -500em;
     z-index: 0;
 }
