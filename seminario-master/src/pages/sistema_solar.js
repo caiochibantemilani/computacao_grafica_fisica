@@ -56,8 +56,7 @@ function SistemaSolar(anterior='') {
         
     }
 
-    function MeuComponente() {
-        useEffect(() => {
+    useEffect(() => {
           const container = document.getElementById('divirTela');
           const content = document.querySelector('.geral_dividido');
       
@@ -66,7 +65,7 @@ function SistemaSolar(anterior='') {
       
           container.scrollLeft = 2000;
           container.scrollTop = 2000;
-    }, []);}
+    }
 
     function planeta_selecionado(event){
         let elementoId = event.target.id;
