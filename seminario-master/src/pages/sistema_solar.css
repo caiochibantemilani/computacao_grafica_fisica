@@ -108,8 +108,8 @@ se transforma no "geral_dividido"*/
 .mercurio, .venus, .terra, .lua, .marte, .jupiter, .saturno, .urano, .neptuno  {
     position: absolute;
     border-style: solid;
-    border-color: white transparent transparent transparent;
-    border-width: 0.1em 0.1em 0 0;
+    border-color: white white white white;
+    border-width: 0.1em 0.1em 0.1 0.1;
     border-radius: 50%;
 }
 
