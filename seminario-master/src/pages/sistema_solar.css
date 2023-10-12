@@ -113,19 +113,12 @@ se transforma no "geral_dividido"*/
     border-radius: 50%;
 }
 
-.aneis {
-    position: absolute;
-    border-style: solid;
-    border-color: #ffe34144;
-    border-width: 0.8em 0.8em 0.8em 0.8em;
-    border-radius: 50%;
-}
-
 .mercurio {
     top: 13em;
     width: 15em;
     height: 15em;
     animation: orbita 10s linear infinite;
+    z-index: 9;
 }
 
 .venus {
@@ -133,6 +126,7 @@ se transforma no "geral_dividido"*/
     width: 20em;
     height: 20em;
     animation: orbita 15s linear infinite;
+    z-index: 8;
 }
 
 /*Aqui eu defino como é a órbita da terra*/
@@ -142,6 +136,7 @@ se transforma no "geral_dividido"*/
     width: 30em;
     height: 30em;
     animation: orbita 50s linear infinite;
+    z-index: 7;
 }
 
 /*Aqui eu defino como é a órbita da lua*/
@@ -151,6 +146,7 @@ se transforma no "geral_dividido"*/
     width: 8em;
     height: 8em;
     animation: orbita 10s linear infinite;
+    z-index: 6;
 }
 
 .marte {
@@ -158,6 +154,7 @@ se transforma no "geral_dividido"*/
     width: 45em;
     height: 45em;
     animation: orbita 60s linear infinite;
+    z-index: 5;
 }
 
 .jupiter {
@@ -165,6 +162,7 @@ se transforma no "geral_dividido"*/
     width: 57em;
     height: 57em;
     animation: orbita 85s linear infinite;
+    z-index: 4;
 }
 
 .saturno {
@@ -172,9 +170,15 @@ se transforma no "geral_dividido"*/
     width: 85em;
     height: 85em;
     animation: orbita 110s linear infinite;
+    z-index: 3;
 }
 
 .aneis {
+    position: absolute;
+    border-style: solid;
+    border-color: #ffe34144;
+    border-width: 0.8em 0.8em 0.8em 0.8em;
+    border-radius: 50%;
     right: 60px;
     top: 74px;
     width: 10em;
@@ -187,6 +191,7 @@ se transforma no "geral_dividido"*/
     width: 110em;
     height: 110em;
     animation: orbita 150s linear infinite;
+    z-index: 2;
 }
 
 .neptuno {
@@ -194,6 +199,7 @@ se transforma no "geral_dividido"*/
     width: 140em;
     height: 140em;
     animation: orbita 200s linear infinite;
+    z-index: 1;
 }
 
 
@@ -397,6 +403,7 @@ legendas*/
     width: 30em;
     height: 30em;
     animation: orbita 50s linear infinite;
+    z-index: 8;
 }
 
 .orbita_venus {
@@ -404,6 +411,7 @@ legendas*/
     width: 20em;
     height: 20em;
     animation: orbita 15s linear infinite;
+    z-index: 7;
 }
 
 .orbita_mercurio {
@@ -411,6 +419,7 @@ legendas*/
     width: 15em;
     height: 15em;
     animation: orbita 10s linear infinite;
+    z-index: 6;
 }
 
 
@@ -419,6 +428,7 @@ legendas*/
     width: 45em;
     height: 45em;
     animation: orbita 60s linear infinite;
+    z-index: 5;
 }
 
 .orbita_jupiter {
@@ -426,6 +436,7 @@ legendas*/
     width: 57em;
     height: 57em;
     animation: orbita 85s linear infinite;
+    z-index: 4;
 }
 
 .orbita_saturno {
@@ -433,6 +444,7 @@ legendas*/
     width: 85em;
     height: 85em;
     animation: orbita 110s linear infinite;
+    z-index: 3;
 }
 
 
@@ -441,7 +453,7 @@ legendas*/
     height: 110em;
     top: -35em;
     width: 110em;
-    z-index: 3;
+    z-index: 2;
 }
 
 .orbita_neptuno {
@@ -449,7 +461,7 @@ legendas*/
     height: 140em;
     top: -45em;
     width: 140em;
-    z-index: 2;
+    z-index: 1;
 }
 
 .universo {
@@ -457,6 +469,7 @@ legendas*/
     width: 1000em;
     z-index: 1;
     top: -500em;
+    z-index: 0;
 }
 
 /*Aqui eu crio o campo para passar o mouse para a terra*/
