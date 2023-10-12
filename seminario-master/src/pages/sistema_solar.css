@@ -311,9 +311,17 @@ se transforma no "geral_dividido"*/
     animation: orbita-inversa 15s linear infinite;
 }
 
+.centro_venus::before {
+    content: "Venus";
+}
+
 .centro_mercurio {
     margin: 8px;
     animation: orbita-inversa 10s linear infinite;
+}
+
+.centro_mercurio::before {
+    content: "Mercurio";
 }
 
 .centro_marte {
@@ -321,9 +329,17 @@ se transforma no "geral_dividido"*/
     animation: orbita-inversa 60s linear infinite;
 }
 
+.centro_marte::before {
+    content: "Marte";
+}
+
 .centro_jupiter {
     margin: 0 70px;
     animation: orbita-inversa 85s linear infinite;
+}
+
+.centro_jupiter::before {
+    content: "Jupiter";
 }
 
 .centro_saturno {
@@ -331,14 +347,26 @@ se transforma no "geral_dividido"*/
     animation: orbita-inversa 110s linear infinite;
 }
 
+.centro_saturno::before {
+    content: "Saturno";
+}
+
 .centro_urano {
     margin: 40px 30px;
     animation: orbita-inversa 150s linear infinite;
 }
 
+.centro_urano::before {
+    content: "Urano";
+}
+
 .centro_neptuno {
     margin: 40px 30px;
     animation: orbita-inversa 200s linear infinite;
+}
+
+.centro_neptuno::before {
+    content: "Netuno";
 }
 
 /*Aqui eu defino a velocidade contrária da legenda da terra*/
