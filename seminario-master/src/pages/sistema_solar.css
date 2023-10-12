@@ -16,6 +16,11 @@ ou seja, tudo na mesma linha, estou colocando tbm, uma transição de 2 segundos
     align-items: center;
     justify-content: center;
 }
+
+.icon {
+    padding: 0 0 0 5px;
+}
+
 /*Quando a tela fica dividida eu preciso que o tamanho e o sistema solar mudem, por isso que o geral 
 se transforma no "geral_dividido"*/
 .geral_dividido {
