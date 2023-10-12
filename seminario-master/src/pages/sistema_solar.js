@@ -4,6 +4,7 @@ import './sistema_solar.css'
 import GravitySimulation from '../GravitySimulation';
 import { BsArrowsMove } from 'react-icons/bs';
 import { BsZoomIn } from 'react-icons/bs';
+import React, { useEffect } from 'react';
 
 function SistemaSolar(anterior='') {
     const [gravity, setGravity] = useState(9.8)
@@ -55,6 +56,18 @@ function SistemaSolar(anterior='') {
         
     }
 
+    function MeuComponente() {
+        useEffect(() => {
+          const container = document.getElementById('divirTela');
+          const content = document.querySelector('.geral_dividido');
+      
+          const horizontalCenter = (container.scrollWidth - container.clientWidth) / 2;
+          const verticalCenter = (container.scrollHeight - container.clientHeight);
+      
+          container.scrollLeft = 2000;
+          container.scrollTop = 2000;
+    }, []);}
+
     function planeta_selecionado(event){
         let elementoId = event.target.id;
         console.log(elementoId)
@@ -103,6 +116,7 @@ function SistemaSolar(anterior='') {
                     onMouseDown={handleMouseDown}
                     onMouseMove={handleMouseMove}
                     onWheel={handleWheel}
+
                 >
                     <div className="instrucoes">        
                         <div className="instrucao_esquerda">Use o mouse para se locomover pelo universo<span className="icon"><BsArrowsMove/></span></div>
