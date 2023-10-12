@@ -16,6 +16,11 @@ ou seja, tudo na mesma linha, estou colocando tbm, uma transição de 2 segundos
     align-items: center;
     justify-content: center;
 }
+
+.icon {
+    padding: 0 0 0 5px;
+}
+
 /*Quando a tela fica dividida eu preciso que o tamanho e o sistema solar mudem, por isso que o geral 
 se transforma no "geral_dividido"*/
 .geral_dividido {
@@ -96,6 +101,9 @@ se transforma no "geral_dividido"*/
     box-shadow: 0 0 3em white;
     transition: 0.8s;
 }
+
+
+
 /*Como a terra e a lua tem algumas caracteristicas em comum, decidi juntar os dois, pra economizar palavras*/
 .mercurio, .venus, .terra, .lua, .marte, .jupiter, .saturno, .urano, .neptuno  {
     position: absolute;
@@ -300,10 +308,18 @@ se transforma no "geral_dividido"*/
     margin: 0 10px;
     animation: orbita-inversa 8.3333s linear infinite;
 }
+
+.centro_lua::before {
+    content: "Lua";
+}
 /*Aqui eu defino a velocidade contrária da legenda da terra*/
 .centro_terra {
     margin: 40px 30px;
     animation: orbita-inversa 50s linear infinite;
+}
+
+.centro_terra::before {
+    content: "Terra";
 }
 
 .centro_venus {
@@ -557,6 +573,11 @@ legendas*/
     flex-direction: column;
     align-items: center;
 }
+
+.centro_sol::before {
+    content: "Sol";
+}
+
 /*Quando eu clico no sol, a clase se transforma nessa, que faz ele crescer*/
 .crescer_sol {
     transform: scale(2.5);
