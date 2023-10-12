@@ -115,7 +115,6 @@ function SistemaSolar(anterior='') {
                     onMouseDown={handleMouseDown}
                     onMouseMove={handleMouseMove}
                     onWheel={handleWheel}
-
                 >
                     <div className="instrucoes">        
                         <div className="instrucao_esquerda">Use o mouse para se locomover pelo universo<span className="icon"><BsArrowsMove/></span></div>
@@ -163,8 +162,8 @@ function SistemaSolar(anterior='') {
                             </div>
                         <div id="orbita_sol" className="orbita_sol">
                             <div className="legenda_terra" id='terra' onClick={planeta_selecionado}>
-                                <button id="centro_terra" className="centro_terra">
-                                </button>
+                                <div id="centro_terra" className="centro_terra">
+                                </div>
                             </div>
                             <div id="orbita_terra" className="orbita_terra">
                                 <div onClick={planeta_selecionado} className="legenda_lua" id='lua'>
