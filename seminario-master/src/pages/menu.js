@@ -13,7 +13,7 @@ function Menu(){
             <div className="paginasFisica">
             <div class="Sumario">
                 <h2 className='h2'>Física aplicadas em JavaScript</h2>
-                <hr className='.hr'></hr>
+                <hr className='hr'></hr>
                 <li className="tema">
                     <img src={planets} alt='vazio' className="tema_imagem" onClick={() => window.location.href = '/sistemaSolar'}/> 
                     <div className="legenda ">Sistema Solar</div>
@@ -43,7 +43,7 @@ function Menu(){
                     <div className="legenda ">Game</div>
                 </li>
                 <h2 className='h2'>Bibliografia</h2>
-                <hr className='.hr'></hr>
+                <hr className='hr'></hr>
                 <li className="tema">
                     <img src={planets} alt='vazio' className="tema_imagem" onClick={() => window.location.href = '/sistemaSolar'}/> 
                     <div className="legenda ">Sistema Solar</div>
