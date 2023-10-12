@@ -1,12 +1,14 @@
 import React from 'react';
 import planets from '../images/sistema_solar_wallpaper.jpg'
 import planets4k from '../images/sistema_solar_wallpaper_4k.jpg'
+import Navbar from '../components/navbar';
 import './menu.css'
 
 function Menu(){
     return(
         <>
         <div className='all'>
+        <Navbar/>
         <img src={planets4k} alt="planets" className="tela"/>
             <div className="paginasFisica">
             <div class="Sumario">

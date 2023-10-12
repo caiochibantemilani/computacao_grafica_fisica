@@ -56,27 +56,44 @@ function SistemaSolar(anterior='') {
     }
 
     function planeta_selecionado(event){
-        let elementoId = event.target.querySelector;
-        let parentId = event.target.parentElement.id;
-
-        console.log(parentId.content)
-        if(elementoId === 'orbita_terra'){
-            elementoId = 'terra'
+        let elementoId = event.target.id;
+        console.log(elementoId)
+        if(elementoId === 'terra'){
+            elementoId = 'terra'    
             setGravity(9.8)
-        }
-        if(elementoId === 'lua'){
+            updateSimulation(elementoId)
+        }else if(elementoId === 'lua'){
             setGravity(1.6)
-        }
-        if(elementoId === 'solClick'){
-            elementoId = 'sol'
+            updateSimulation(elementoId)
+        }else if(elementoId === 'sol'){
             setGravity(274)
             updateSimulation(elementoId)
+        }else if(elementoId === 'urano'){
+            setGravity(8.87)
+            updateSimulation(elementoId)
+        }else if(elementoId === 'mercurio'){
+            setGravity(3.7)
+            updateSimulation(elementoId)
+        }else if(elementoId === 'venus'){
+            setGravity(8.87)
+            updateSimulation(elementoId)
+        }else if(elementoId === 'marte'){
+            setGravity(3.71)
+            updateSimulation(elementoId)
+        }else if(elementoId === 'jupiter'){
+            setGravity(24.8)
+            updateSimulation(elementoId)
+        }else if(elementoId === 'saturno'){
+            setGravity(10.44)
+            updateSimulation(elementoId)
+        }else if(elementoId === 'netuno'){
+            setGravity(11.15)
+            updateSimulation(elementoId)
         }
-        if(planet === elementoId){
+        else if(planet === elementoId){
             elementoId = ''
         }else if(planet !== ''){
             elementoId = ''
-
         }        
     }
     return(
@@ -92,14 +109,14 @@ function SistemaSolar(anterior='') {
                         <div className="instrucao_direita">Para dar zoom use o scroll do mouse<span className="icon"><BsZoomIn/></span></div>
                         </div>
                     <div id="sistema_solar_universo" className="sistema_solar">
-                        <div id="sol" className="sol">
+                        <div id="sol" className="sol" onClick={planeta_selecionado}>
                             <div className="legenda_sol">
-                                <div id="solClick" className="centro_sol" onClick={planeta_selecionado}>
+                                <div id="solClick" className="centro_sol">
                                 </div>
                                 <div className="ponta"></div>
                             </div>
                         </div>
-                        <div id="mercurio" className="mercurio">
+                        <div id="mercurio"className="mercurio" onClick={planeta_selecionado}>
                         </div>
                         <div id="venus" className="venus">
                         </div>
@@ -115,7 +132,7 @@ function SistemaSolar(anterior='') {
                             <div id="aneis" className="aneis">
                             </div>
                         </div>
-                        <div id="urano" className="urano">
+                        <div className="urano">
                         </div>
                         <div id="neptuno" className="neptuno">
                         </div>
@@ -126,17 +143,17 @@ function SistemaSolar(anterior='') {
                                 </div>
                             </div>
                             <div id="orbita_mercurio" className="orbita_mercurio">
-                                <div id="cliquemercurio" onClick="planeta_selecionado('mercurio')" className="legenda_mercurio">
+                                <div className="legenda_mercurio">
                                     <div id="centro_mercurio" className="centro_mercurio">
                                     </div>
                                 </div>
                             </div>
                         <div id="orbita_sol" className="orbita_sol">
-                            <div className="legenda_terra" id='terra'>
-                                <div id="centro_terra" className="centro_terra" >
-                                </div>
+                            <div className="legenda_terra" id='terra' onClick={planeta_selecionado}>
+                                <button id="centro_terra" className="centro_terra">
+                                </button>
                             </div>
-                            <div id="orbita_terra" className="orbita_terra" onClick={planeta_selecionado}>
+                            <div id="orbita_terra" className="orbita_terra">
                                 <div onClick={planeta_selecionado} className="legenda_lua" id='lua'>
                                     <div id="centro_lua" className="centro_lua">
                                     </div>
@@ -162,7 +179,7 @@ function SistemaSolar(anterior='') {
                             </div>
                         </div>
                         <div id="orbita_urano" className="orbita_urano">
-                            <div id="cliqueurano" onClick="planeta_selecionado('urano')" className="legenda_urano">
+                            <div id="urano" onClick={planeta_selecionado} className="legenda_urano">
                                 <div id="centro_urano" className="centro_urano">
                                 </div>
                             </div>
