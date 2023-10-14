@@ -8,6 +8,7 @@ import clothImage from '../images/cloth.png'
 import NewtonImage from '../images/newton.png';
 import gameImage from '../images/game.png'
 import Navbar from '../components/navbar';
+import WaterImage from '../images/water.png'
 import './menu.css'
 
 function Menu(){
@@ -47,6 +48,10 @@ function Menu(){
                 <li className='tema'>
                     <img src={gameImage} className="tema_imagem" alt='vazio' onClick={() => window.location.href = '/game'}/> 
                     <div className="legenda ">Game</div>
+                </li>
+                <li className='tema'>
+                    <img src={WaterImage} className="tema_imagem" alt='vazio' onClick={() => window.location.href = '/simulacao_agua'}/> 
+                    <div className="legenda ">Simulação de água</div>
                 </li>
                 <h2 className='h2'>Bibliografia</h2>
                 <hr className='hr'></hr>

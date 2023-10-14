@@ -9,6 +9,7 @@ import CollisionSimulation from './CollisionSimulation';
 import Cloth from './Cloth';
 import NewtonCradle from './NewtonCradle';
 import MatterGame from './MatterGame';
+import WaterSimulation from './WaterSimulation'
 import Menu from './pages/menu'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/cloth" element={<Cloth/>}></Route>
           <Route path="/NewtonCradle" element={<NewtonCradle/>}></Route>
           <Route path="/game" element={<MatterGame/>}></Route>
+          <Route path="/simulacao_agua" element={<WaterSimulation/>}></Route>
         </Routes>
          
     </BrowserRouter>
