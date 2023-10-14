@@ -123,9 +123,6 @@ function SistemaSolar(anterior='') {
                     <div id="sistema_solar_universo" className="sistema_solar">
                         <div id="sol" className="sol" onClick={planeta_selecionado}>
                             <div className="legenda_sol" >
-                                <div id="solClick" className="centro_sol">
-                                </div>
-                                <div className="ponta"></div>
                             </div>
                         </div>
                         <div id="mercurio"className="mercurio" onClick={planeta_selecionado}>
@@ -150,57 +147,38 @@ function SistemaSolar(anterior='') {
                         </div>
                         <div id="orbita_venus" className="orbita_venus">
                                 <div id="cliquevenus" onClick="planeta_selecionado('venus')" className="legenda_venus">
-                                    <div id="centro_venus" className="centro_venus">
-                                    </div>
                                 </div>
                             </div>
                             <div id="orbita_mercurio" className="orbita_mercurio">
                                 <div className="legenda_mercurio">
-                                    <div id="centro_mercurio" className="centro_mercurio">
-                                    </div>
                                 </div>
                             </div>
                         <div id="orbita_sol" className="orbita_sol">
                             <div className="legenda_terra" id='terra' onClick={planeta_selecionado}>
-                                <div id="centro_terra" className="centro_terra">
-                                </div>
                             </div>
                             <div id="orbita_terra" className="orbita_terra">
                                 <div onClick={planeta_selecionado} className="legenda_lua" id='lua'>
-                                    <div id="centro_lua" className="centro_lua">
-                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div id="orbita_marte" className="orbita_marte">
                             <div id="cliquemarte" onClick="planeta_selecionado('marte')" className="legenda_marte">
-                                <div id="centro_marte" className="centro_marte">
-                                </div>
                             </div>
                         </div>
                         <div id="orbita_jupiter" className="orbita_jupiter">
                             <div id="cliquejupiter" onClick="planeta_selecionado('jupiter')" className="legenda_jupiter">
-                                <div id="centro_jupiter" className="centro_jupiter">
-                                </div>
                             </div>
                         </div>
                         <div id="orbita_saturno" className="orbita_saturno">
                             <div id="cliquesaturno" onClick="planeta_selecionado('saturno')" className="legenda_saturno">
-                                <div id="centro_saturno" className="centro_saturno">
-                                </div>
                             </div>
                         </div>
                         <div id="orbita_urano" className="orbita_urano">
                             <div id="urano" className="legenda_urano">
-                                <div id="centro_urano" className="centro_urano">
-                                </div>
                             </div>
                         </div>
                         <div id="orbita_neptuno" className="orbita_neptuno">
                             <div id="cliqueneptuno" onClick="planeta_selecionado('neptuno')" className="legenda_neptuno">
-                                <div id="centro_neptuno" className="centro_neptuno">
-
-                                </div>
                             </div>
                         </div>
                         <div className="universo">

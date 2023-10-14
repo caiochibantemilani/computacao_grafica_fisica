@@ -46,7 +46,8 @@ se transforma no "geral_dividido"*/
     display: flex;
     width: 70%;
     justify-content: space-evenly;
-    padding-top: 5px;
+    padding-top: 5px;    
+    z-index: 100;
 }
 
 .instrucao_esquerda {
