@@ -120,6 +120,12 @@ se transforma no "geral_dividido"*/
     height: 15em;
     animation: orbita 10s linear infinite;
     z-index: 9;
+    background-color: black;
+}
+
+.mercurio:hover {
+    cursor: pointer;
+    background-color: #FFFFED11;
 }
 
 .venus {
@@ -128,6 +134,12 @@ se transforma no "geral_dividido"*/
     height: 27em;
     animation: orbita 15s linear infinite;
     z-index: 8;
+    background-color: black;
+}
+
+.venus:hover {
+    cursor: pointer;
+    background-color: #ADD8E611;
 }
 
 /*Aqui eu defino como é a órbita da terra*/
@@ -138,6 +150,12 @@ se transforma no "geral_dividido"*/
     height: 45em;
     animation: orbita 50s linear infinite;
     z-index: 7;
+    background-color: black;
+}
+
+.terra:hover {
+    cursor: pointer;
+    background-color: #7FFFD411;
 }
 
 /*Aqui eu defino como é a órbita da lua*/
@@ -147,7 +165,12 @@ se transforma no "geral_dividido"*/
     width: 5em;
     height: 5em;
     animation: orbita 10s linear infinite;
-    z-index: -100000000000;
+    z-index: 0;
+}
+
+.lua:hover {
+    cursor: pointer;
+    background-color: #c0c0c011;
 }
 
 .marte {
@@ -156,6 +179,12 @@ se transforma no "geral_dividido"*/
     height: 68em;
     animation: orbita 60s linear infinite;
     z-index: 5;
+    background-color: black;
+}
+
+.marte:hover {
+    cursor: pointer;
+    background-color: #f0808011;
 }
 
 .jupiter {
@@ -164,6 +193,12 @@ se transforma no "geral_dividido"*/
     height: 100em;
     animation: orbita 85s linear infinite;
     z-index: 4;
+    background-color: black;
+}
+
+.jupiter:hover {
+    cursor: pointer;
+    background-color: #FFA50011;
 }
 
 .saturno {
@@ -172,6 +207,12 @@ se transforma no "geral_dividido"*/
     height: 150em;
     animation: orbita 110s linear infinite;
     z-index: 3;
+    background-color: black;
+}
+
+.saturno:hover {
+    cursor: pointer;
+    background-color: #ffe34111;
 }
 
 .aneis {
@@ -186,7 +227,7 @@ se transforma no "geral_dividido"*/
     width: 10em;
     height: 10em;
     animation: orbita 10s linear infinite;
-    z-index: -100000000000;
+    z-index: 0;
 }
 
 .urano {
@@ -195,6 +236,12 @@ se transforma no "geral_dividido"*/
     height: 220em;
     animation: orbita 150s linear infinite;
     z-index: 2;
+    background-color: black;
+}
+
+.urano:hover {
+    cursor: pointer;
+    background-color: #adff2f11;
 }
 
 .neptuno {
@@ -203,6 +250,12 @@ se transforma no "geral_dividido"*/
     height: 325em;
     animation: orbita 200s linear infinite;
     z-index: 1;
+    background-color: black;
+}
+
+.neptuno:hover {
+    cursor: pointer;
+    background-color: #00008B11;
 }
 
 /*Aqui eu começo a fazer as bolinhas, que mais para frente vão virar nossos planetinhas*/
