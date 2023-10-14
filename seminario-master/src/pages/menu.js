@@ -23,7 +23,7 @@ function Menu(){
                 <hr className='hr'></hr>
                 <li className="tema">
                     <img src={planets} alt='vazio' className="tema_imagem" onClick={() => window.location.href = '/sistemaSolar'}/> 
-                    <div className="legenda ">Sistema Solar</div>
+                    <div className="legenda ">Gravidade</div>
                 </li>    
                 <li className="tema">
                     <img src={molaImage} className="tema_imagem" alt='vazio' onClick={() => window.location.href = '/mola'}/> 
@@ -43,7 +43,7 @@ function Menu(){
                 </li>
                 <li className='tema'>
                     <img src={NewtonImage} className="tema_imagem" alt='vazio' onClick={() => window.location.href = '/NewtonCradle'}/> 
-                    <div className="legenda ">pêndulo de Newton</div>
+                    <div className="legenda ">Pêndulo de Newton</div>
                 </li>
                 <li className='tema'>
                     <img src={gameImage} className="tema_imagem" alt='vazio' onClick={() => window.location.href = '/game'}/> 
