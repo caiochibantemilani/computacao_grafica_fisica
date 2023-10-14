@@ -46,10 +46,10 @@ class MatterGame extends React.Component {
         });
         render.mouse = mouse;
     
-        let ball = Matter.Bodies.circle(200, 200, 30);
+        let ball = Matter.Bodies.circle(400, 200, 30);
         ball.render.fillStyle = 'red'; // Define a cor de preenchimento da bolinha como vermelha
         let sling = Matter.Constraint.create({ 
-            pointA: { x: 200, y: 200 },
+            pointA: { x: 400, y: 200 },
             bodyB: ball, 
             stiffness: 0.05
         });
@@ -63,8 +63,8 @@ class MatterGame extends React.Component {
             if(e.body === ball) firing = true;
         });
         Matter.Events.on(engine,'afterUpdate', function() {
-            if (firing && Math.abs(ball.position.x-200) < 20 && Math.abs(ball.position.y-200) < 20) {
-                ball = Matter.Bodies.circle(200, 200, 20);
+            if (firing && Math.abs(ball.position.x-400) < 20 && Math.abs(ball.position.y-200) < 20) {
+                ball = Matter.Bodies.circle(400, 200, 30);
                 ball.render.fillStyle = 'red'; // Define a cor de preenchimento da nova bolinha como vermelha
                 Matter.World.add(engine.world, ball);
                 sling.bodyB = ball;
