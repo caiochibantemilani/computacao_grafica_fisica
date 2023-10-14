@@ -22,7 +22,7 @@ class Sketch extends Component {
       };
 
       p.draw = () => {
-        p.background(220); // Define o fundo do canvas
+        p.background(100); // Define o fundo do canvas
 
         // Atualiza e exibe as bolas
         ball1.update();
@@ -59,7 +59,7 @@ class Sketch extends Component {
         }
 
         display() {
-          p.fill(0);
+          p.fill("red");
           p.ellipse(this.position.x, this.position.y, this.radius * 2);
         }
 

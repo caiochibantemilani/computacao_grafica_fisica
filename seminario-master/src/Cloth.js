@@ -40,7 +40,7 @@ class Cloth extends React.Component {
           element: document.body,
           engine: engine,
           options: {
-            width: 800,
+            width: 500,
             height: 600
           }
         });
@@ -52,7 +52,7 @@ class Cloth extends React.Component {
         Runner.run(runner, engine);
     
         // see cloth function defined later in this file
-        var cloth = Example.cloth.cloth(200, 200, 20, 12, 5, 5, false, 8);
+        var cloth = Example.cloth.cloth(150, 200, 20, 12, 5, 5, false, 8);
     
         for (var i = 0; i < 20; i++) {
           cloth.bodies[i].isStatic = true;
@@ -60,9 +60,7 @@ class Cloth extends React.Component {
     
         Composite.add(world, [
           cloth,
-          Bodies.circle(300, 500, 80, { isStatic: true, render: { fillStyle: '#060a19' } }),
-          Bodies.rectangle(500, 480, 80, 80, { isStatic: true, render: { fillStyle: '#060a19' } }),
-          Bodies.rectangle(400, 609, 800, 50, { isStatic: true })
+          Bodies.circle(300, 500, 80, { isStatic: true, render: { fillStyle: '#060a19' } }),          Bodies.rectangle(400, 609, 800, 50, { isStatic: true })
         ]);
     
         // add mouse control
@@ -85,7 +83,7 @@ class Cloth extends React.Component {
         // fit the render viewport to the scene
         Render.lookAt(render, {
           min: { x: 0, y: 0 },
-          max: { x: 800, y: 600 }
+          max: { x: 1000, y: 1000 }
         });
     
         // context for MatterTools.Demo
@@ -104,21 +102,6 @@ class Cloth extends React.Component {
       Example.cloth.title = 'Cloth';
       Example.cloth.for = '>=0.14.2';
     
-      /**
-      * Creates a simple cloth like object.
-      * @method cloth
-      * @param {number} xx
-      * @param {number} yy
-      * @param {number} columns
-      * @param {number} rows
-      * @param {number} columnGap
-      * @param {number} rowGap
-      * @param {boolean} crossBrace
-      * @param {number} particleRadius
-      * @param {} particleOptions
-      * @param {} constraintOptions
-      * @return {composite} A new composite cloth
-      */
       Example.cloth.cloth = function (xx, yy, columns, rows, columnGap, rowGap, crossBrace, particleRadius, particleOptions, constraintOptions) {
         var Body = Matter.Body,
           Bodies = Matter.Bodies,
@@ -150,8 +133,8 @@ class Cloth extends React.Component {
         <iframe
           srcDoc={srcDoc} // Substitua pelo caminho correto para o seu arquivo HTML
           title="Meu Iframe"
-          width="800"
-          height="800"
+          width="600"
+          height="650"
         ></iframe>
       </div>
     );

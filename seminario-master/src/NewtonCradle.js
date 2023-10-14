@@ -55,10 +55,6 @@ class NewtonCradle extends React.Component {
           Composite.add(world, cradle);
           Body.translate(cradle.bodies[0], { x: -180, y: -100 });
     
-          cradle = Example.newtonsCradle.newtonsCradle(280, 380, 7, 20, 140);
-          Composite.add(world, cradle);
-          Body.translate(cradle.bodies[0], { x: -140, y: -100 });
-    
           // add mouse control
           var mouse = Mouse.create(render.canvas),
               mouseConstraint = MouseConstraint.create(engine, {
@@ -98,16 +94,6 @@ class NewtonCradle extends React.Component {
       Example.newtonsCradle.title = 'Newtons Cradle';
       Example.newtonsCradle.for = '>=0.14.2';
     
-      /**
-      * Creates a composite with a Newton's Cradle setup of bodies and constraints.
-      * @method newtonsCradle
-      * @param {number} xx
-      * @param {number} yy
-      * @param {number} number
-      * @param {number} size
-      * @param {number} length
-      * @return {composite} A new composite newtonsCradle body
-      */
       Example.newtonsCradle.newtonsCradle = function(xx, yy, number, size, length) {
           var Composite = Matter.Composite,
               Constraint = Matter.Constraint,

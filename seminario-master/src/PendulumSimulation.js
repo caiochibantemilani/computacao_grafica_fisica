@@ -30,7 +30,7 @@ class PendulumSimulation extends Component {
     };
 
     p.draw = () => {
-      p.background(220);
+      p.background(100);
 
       const gravity = 1.5;
       const weightForce = weight * gravity * p.sin(angle);
@@ -48,7 +48,7 @@ class PendulumSimulation extends Component {
       p.strokeWeight(2);
       p.line(p.width / 2, p.height / 2, weightX, weightY);
 
-      p.fill(127);
+      p.fill('red');
       p.stroke(0);
       p.ellipse(weightX, weightY, 40, 40);
     };

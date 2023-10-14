@@ -74,7 +74,7 @@ class SpringSimulation extends Component {
       // Função de desenho do sketch p5.js (chamada a cada quadro)
 
       // Limpa o fundo do canvas
-      p.background(220);
+      p.background(100);
 
       // Verifica se o usuário está arrastando a bolinha com o mouse
       if (this.dragging) {
@@ -111,7 +111,7 @@ class SpringSimulation extends Component {
       p.line(this.equilibriumX, this.equilibriumY, this.position.x, this.position.y);
 
       // Desenha a bolinha
-      p.fill('blue');
+      p.fill('red');
       p.noStroke();
       p.ellipse(this.position.x, this.position.y, this.objectSize, this.objectSize);
 
