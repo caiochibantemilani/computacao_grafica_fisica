@@ -75,6 +75,10 @@ se transforma no "geral_dividido"*/
     color: white;
     padding: 10px 50px;
     right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 /*Aqui estou definindo a parte dos textos, cor de fundo, o mouse, largura e assim vai*/
 .sistema_solar {
@@ -685,6 +689,24 @@ legendas*/
     border-radius: 50%;
     transform: scale(2.5);
 }
+
+.botao_reiniciar {    
+    border-radius: 10px;
+    background: #000000aa;
+    color: cyan;
+    padding: 5px 10px;
+    box-shadow: 0px 0px 10px cyan;
+    border-block-color: cyan;
+}
+
+.botao_reiniciar:hover {    
+    box-shadow: 0px 0px 20px cyan;
+}
+
+.botao_reiniciar:active {    
+    background: #000000 !important;
+}
+
 .centro_lua_invisivel, .centro_terra_invisivel {
     cursor: default !important;
     opacity: 0;

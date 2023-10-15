@@ -190,7 +190,7 @@ function SistemaSolar(anterior='') {
                     <h1>{planet ? planet : ''}</h1>
                     {planet ? <GravitySimulation gravity={gravity} /> : ''}
                     
-                    {planet ? <button onClick={() =>{
+                    {planet ? <button className='botao_reiniciar' onClick={() =>{
                         const prevPlanet = planet
                         setPlanet('')
                         setTimeout(() => {
