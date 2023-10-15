@@ -18,7 +18,7 @@ function Menu(){
         <Navbar/>
         <img src={planets4k} alt="planets" className="tela"/>
             <div className="paginasFisica">
-            <div class="Sumario">
+            <div className="Sumario">
                 <h2 className='h2'>Física aplicadas em JavaScript</h2>
                 <hr className='hr'></hr>
                 <li className="tema">
