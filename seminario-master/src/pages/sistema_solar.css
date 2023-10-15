@@ -66,19 +66,22 @@ se transforma no "geral_dividido"*/
 
 /*Aqui estou definindo a parte dos textos, cor de fundo, o mouse, largura e assim vai*/
 .contexto {
-    position: fixed;
-    cursor: default;
-    background-color: #222222;
-    width: 30%;
-    margin: 0;
-    height: 100%;
-    color: white;
-    padding: 10px 50px;
-    right: 0;
+    background-color: #010101;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    color: #fff;
+    cursor: default;
+    height: 100%;
+    margin: 0;
+    padding: 10px 50px;
+    position: fixed;
+    right: 0;
     text-align: center;
+    width: 30%;
+    border-block-color: cyan;
+    box-shadow: 0 0 10px cyan;
+    color: cyan;
+    justify-content: center;
+    overflow: hidden;
 }
 /*Aqui estou definindo a parte dos textos, cor de fundo, o mouse, largura e assim vai*/
 .sistema_solar {
