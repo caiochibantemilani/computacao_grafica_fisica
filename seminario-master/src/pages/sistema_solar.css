@@ -702,6 +702,7 @@ legendas*/
     padding: 5px 10px;
     box-shadow: 0px 0px 10px cyan;
     border-block-color: cyan;
+    --bs-btn-border-color: cyan;
 }
 
 .botao_reiniciar:hover {    

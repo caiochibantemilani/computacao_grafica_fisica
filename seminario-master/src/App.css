@@ -2,6 +2,32 @@
   text-align: center;
 }
 
+.titulo {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navbar { 
+  background-color: #112 !important;
+  box-shadow: 0 0 20px black !important;
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 3rem !important;
+}
+
+.btn {
+  background: #223;
+  --bs-btn-border-color: black;
+}
+
+.offcanvas {
+  background-color: #112 !important;
+  color: white;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
