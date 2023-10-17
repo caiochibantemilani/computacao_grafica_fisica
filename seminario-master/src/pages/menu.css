@@ -126,3 +126,16 @@ body {
 .hr {
     color: white !important;
 }
+
+.resumo_geral {
+    margin: 125px 0 0 0;
+    background-color: #CCCCCCaa;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+}
+
