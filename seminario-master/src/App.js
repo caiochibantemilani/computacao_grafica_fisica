@@ -25,6 +25,8 @@ function App() {
           <Route path="/NewtonCradle" element={<NewtonCradle/>}></Route>
           <Route path="/game" element={<MatterGame/>}></Route>
           <Route path="/simulacao_agua" element={<WaterSimulation/>}></Route>
+          <Route path="/planck" element={<bibliotecaPlanck/>}></Route>
+          <Route path="/planckoutro" element={<bibliotecaPlanckOutro/>}></Route>
         </Routes>
          
     </BrowserRouter>
