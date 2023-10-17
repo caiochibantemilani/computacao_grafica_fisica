@@ -127,15 +127,39 @@ body {
     color: white !important;
 }
 
-.resumo_geral {
-    margin: 125px 0 0 0;
-    background-color: #CCCCCCaa;
+.resumo_total {    
+    height: 100%;
     width: 100%;
+    position: absolute;
+    background: #000000aa;
+    z-index: 100000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.resumo_geral {
+    background-color: #CCCCCC;
+    min-width: 40%;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     text-align: center;
     flex-direction: column;
     position: absolute;
     align-items: center;
+    overflow: hidden;
 }
 
+.botoes_separados {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.tituloResumo {
+    color: white;
+    background-color: #222222aa;
+    width: 100%;
+}
