@@ -46,7 +46,7 @@ class NewtonCradle extends React.Component {
             });
             render.mouse = mouse;
 
-            let rectangle = Matter.Bodies.rectangle(1100, 400, 30, 100);
+            let rectangle = Matter.Bodies.rectangle(1100, 400, 30, 100, {density: 1, friction: 0.1});
             rectangle.render.fillStyle = 'red'; // Define a cor de preenchimento da bolinha como vermelha
 
             let firing = true
