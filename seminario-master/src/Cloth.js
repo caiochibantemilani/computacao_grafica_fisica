@@ -1,9 +1,7 @@
 import React from 'react';
-import Navbar from './components/navbar';
 
 class Cloth extends React.Component {
   render() {
-
     const srcDoc = `
     <!DOCTYPE html>
     <html lang="en">
@@ -129,7 +127,6 @@ class Cloth extends React.Component {
     </html>  `
       return (
       <div>
-        <Navbar/>
         <iframe
           srcDoc={srcDoc} // Substitua pelo caminho correto para o seu arquivo HTML
           title="Meu Iframe"

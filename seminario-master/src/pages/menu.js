@@ -8,8 +8,9 @@ import colisaoImage from '../images/colisao.png'
 import clothImage from '../images/cloth.png'
 import NewtonImage from '../images/newton.png';
 import gameImage from '../images/game.png'
-import Navbar from '../components/navbar';
 import WaterImage from '../images/water.png'
+import PlanckImage from '../images/planck.png'
+import Planck2Image from '../images/planck2.png';
 import './menu.css'
 
 function Menu(){
@@ -57,6 +58,16 @@ function Menu(){
         Resumo: 'PREENCHER COM O RESUMO DA Agua',
         Endereco: '/simulacao_agua'
     });
+    const [planck1, setPlanck] = useState({
+        Titulo: 'Pendulo',
+        Resumo: 'PREENCHER COM O RESUMO DA Agua',
+        Endereco: '/planck2'
+    });
+    const [planck2, setPlanck2] = useState({
+        Titulo: 'Pendulo',
+        Resumo: 'PREENCHER COM O RESUMO DA Agua',
+        Endereco: '/planck2'
+    });
 
     function planeta_selecionado(teste, resumo){
         setClicado(true);
@@ -71,7 +82,6 @@ function Menu(){
     return(
         <>
         <div className='all'>
-        <Navbar/>
             {!clicado && (
                 <img src={planets4k} alt="planets" className="tela"/>
             )}
@@ -117,35 +127,13 @@ function Menu(){
                     <img onClick={() => planeta_selecionado(WaterImage, agua)} src={WaterImage} className="tema_imagem" alt='vazio'/> 
                     <div className="legenda ">Simulação de água</div>
                 </li>
-                <h2 className='h2'>Bibliografia</h2>
-                <hr className='hr'></hr>
-                <li className="tema">
-                    <img src={planets} alt='vazio' className="tema_imagem"/> 
-                    <div className="legenda ">Sistema Solar</div>
-                </li>    
-                <li className="tema">
-                    <img src={planets} className="tema_imagem" alt='vazio'/> 
-                    <div className="legenda ">Simulação de Mola</div>
-                </li> 
                 <li className='tema'>
-                    <img src={planets} className="tema_imagem" alt='vazio'/> 
-                    <div className="legenda ">Simulação de pêndulo</div>
+                    <img onClick={() => planeta_selecionado(PlanckImage, planck1)} src={PlanckImage} className="tema_imagem" alt='vazio'/> 
+                    <div className="legenda ">Exemplo de planck 1</div>
                 </li>
                 <li className='tema'>
-                    <img src={planets} className="tema_imagem" alt='vazio' onClick={() => window.location.href = '/colisao'}/> 
-                    <div className="legenda ">Simulação de colisão</div>
-                </li>
-                <li className='tema'>
-                    <img src={planets} className="tema_imagem" alt='vazio' onClick={() => window.location.href = '/cloth'}/> 
-                    <div className="legenda ">Cloth</div>
-                </li>
-                <li className='tema'>
-                    <img src={planets} className="tema_imagem" alt='vazio' onClick={() => window.location.href = '/NewtonCradle'}/> 
-                    <div className="legenda ">pêndulo de Newton</div>
-                </li>
-                <li className='tema'>
-                    <img src={planets} className="tema_imagem" alt='vazio' onClick={() => window.location.href = '/game'}/> 
-                    <div className="legenda ">Game</div>
+                    <img onClick={() => planeta_selecionado(Planck2Image, planck2)} src={Planck2Image} className="tema_imagem" alt='vazio'/> 
+                    <div className="legenda ">Exemplo de planck 2</div>
                 </li>
             </div>
             </div>
