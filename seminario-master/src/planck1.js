@@ -1,6 +1,6 @@
 import React from 'react';
 
-class NewtonCradle extends React.Component {
+class Plank1 extends React.Component {
   render() {
 
     const srcDoc = `
@@ -47,4 +47,4 @@ class NewtonCradle extends React.Component {
   }
 }
 
-export default NewtonCradle;
+export default Plank1;

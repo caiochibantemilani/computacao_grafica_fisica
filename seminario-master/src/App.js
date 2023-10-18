@@ -10,6 +10,8 @@ import Cloth from './Cloth';
 import NewtonCradle from './NewtonCradle';
 import MatterGame from './MatterGame';
 import WaterSimulation from './WaterSimulation'
+import Plank1 from './planck1';
+import Planck2 from './plank2';
 import Menu from './pages/menu'
 
 function App() {
@@ -25,8 +27,8 @@ function App() {
           <Route path="/NewtonCradle" element={<NewtonCradle/>}></Route>
           <Route path="/game" element={<MatterGame/>}></Route>
           <Route path="/simulacao_agua" element={<WaterSimulation/>}></Route>
-          <Route path="/planck" element={<bibliotecaPlanck/>}></Route>
-          <Route path="/planckoutro" element={<bibliotecaPlanckOutro/>}></Route>
+          <Route path="/planck" element={<Plank1/>}></Route>
+          <Route path="/planck2" element={<Planck2/>}></Route>
         </Routes>
          
     </BrowserRouter>
