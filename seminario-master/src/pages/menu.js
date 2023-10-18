@@ -89,7 +89,7 @@ function Menu(){
                 <img src={evento} alt="planets" className="tela"/>
             )}
             {clicado && (
-                <div className='resumo_total'><div className='resumo_geral'><h1 className='tituloResumo'>{resumoGeral.Titulo}</h1><p>{resumoGeral.Resumo}</p><div className='botoes_separados'><a className="btn btn-primary" href={resumoGeral.Endereco}>Entrar</a><button onClick={() => fechar()} className="btn btn-primary">Fechar</button></div></div></div>
+                <div onClick={() => fechar()} className='resumo_total'><div className='resumo_geral'><h1 className='tituloResumo'>{resumoGeral.Titulo}</h1><p>{resumoGeral.Resumo}</p><div className='botoes_separados'><a className="btn btn-primary" href={resumoGeral.Endereco}>Entrar</a><button onClick={() => fechar()} className="btn btn-primary">Fechar</button></div></div></div>
             )}
             <div className="paginasFisica">
             <div className="Sumario">
