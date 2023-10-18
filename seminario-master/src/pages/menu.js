@@ -69,7 +69,7 @@ function Menu(){
         Endereco: '/planck2'
     });
 
-    function planeta_selecionado(teste, resumo){
+    function opcao_selecionada(teste, resumo){
         setClicado(true);
         setEvento(teste);
         setResumoGeral(resumo);
@@ -96,43 +96,43 @@ function Menu(){
                 <h2 className='h2'>Física aplicadas em JavaScript</h2>
                 <hr className='hr'></hr>
                 <li className="tema">
-                    <img onClick={() => planeta_selecionado(planets, gravidade)}  src={planets} alt='vazio' className="tema_imagem" /> 
+                    <img onClick={() => opcao_selecionada(planets, gravidade)}  src={planets} alt='vazio' className="tema_imagem" /> 
                     <div className="legenda ">Gravidade</div>
                 </li>    
                 <li className="tema">
-                    <img onClick={() => planeta_selecionado(molaImage, mola)} src={molaImage} className="tema_imagem" alt='vazio'/> 
+                    <img onClick={() => opcao_selecionada(molaImage, mola)} src={molaImage} className="tema_imagem" alt='vazio'/> 
                     <div className="legenda ">Simulação de Mola</div>
                 </li> 
                 <li className='tema'>
-                    <img onClick={() => planeta_selecionado(penduloImage, pendulo)} src={penduloImage} className="tema_imagem" alt='vazio'/> 
+                    <img onClick={() => opcao_selecionada(penduloImage, pendulo)} src={penduloImage} className="tema_imagem" alt='vazio'/> 
                     <div className="legenda ">Simulação de pêndulo</div>
                 </li>
                 <li className='tema'>
-                    <img onClick={() => planeta_selecionado(colisaoImage, colisao)} src={colisaoImage} className="tema_imagem" alt='vazio'/> 
+                    <img onClick={() => opcao_selecionada(colisaoImage, colisao)} src={colisaoImage} className="tema_imagem" alt='vazio'/> 
                     <div className="legenda ">Simulação de colisão</div>
                 </li>
                 <li className='tema'>
-                    <img onClick={() => planeta_selecionado(clothImage, cloth)} src={clothImage} className="tema_imagem" alt='vazio'/> 
+                    <img onClick={() => opcao_selecionada(clothImage, cloth)} src={clothImage} className="tema_imagem" alt='vazio'/> 
                     <div className="legenda ">Cloth</div>
                 </li>
                 <li className='tema'>
-                    <img onClick={() => planeta_selecionado(NewtonImage, newton)} src={NewtonImage} className="tema_imagem" alt='vazio'/> 
+                    <img onClick={() => opcao_selecionada(NewtonImage, newton)} src={NewtonImage} className="tema_imagem" alt='vazio'/> 
                     <div className="legenda ">Pêndulo de Newton</div>
                 </li>
                 <li className='tema'>
-                    <img onClick={() => planeta_selecionado(gameImage, game)} src={gameImage} className="tema_imagem" alt='vazio'/> 
+                    <img onClick={() => opcao_selecionada(gameImage, game)} src={gameImage} className="tema_imagem" alt='vazio'/> 
                     <div className="legenda ">Game</div>
                 </li>
                 <li className='tema'>
-                    <img onClick={() => planeta_selecionado(WaterImage, agua)} src={WaterImage} className="tema_imagem" alt='vazio'/> 
+                    <img onClick={() => opcao_selecionada(WaterImage, agua)} src={WaterImage} className="tema_imagem" alt='vazio'/> 
                     <div className="legenda ">Simulação de água</div>
                 </li>
                 <li className='tema'>
-                    <img onClick={() => planeta_selecionado(PlanckImage, planck1)} src={PlanckImage} className="tema_imagem" alt='vazio'/> 
+                    <img onClick={() => opcao_selecionada(PlanckImage, planck1)} src={PlanckImage} className="tema_imagem" alt='vazio'/> 
                     <div className="legenda ">Exemplo de planck 1</div>
                 </li>
                 <li className='tema'>
-                    <img onClick={() => planeta_selecionado(Planck2Image, planck2)} src={Planck2Image} className="tema_imagem" alt='vazio'/> 
+                    <img onClick={() => opcao_selecionada(Planck2Image, planck2)} src={Planck2Image} className="tema_imagem" alt='vazio'/> 
                     <div className="legenda ">Exemplo de planck 2</div>
                 </li>
             </div>
