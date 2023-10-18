@@ -155,11 +155,39 @@ body {
 .botoes_separados {
     display: flex;
     justify-content: space-between;
-    width: 30%;
 }
 
 .tituloResumo {
     color: white;
     background-color: #222222aa;
     width: 100%;
+    cursor: default;
 }
+
+.codigo {
+    background-color: black;
+    color: lightgreen;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.texto_copiada {
+    background-color: #00000000;
+    color: green;
+    text-shadow: 0 0 1px #ffffff;
+    padding: 0 10px;
+}
+
+.fechar {
+    width: 30px;
+    color: black;
+    background-color: white;
+    border-radius: 100px;
+    font-size: 1.5rem;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    cursor: pointer;
+    box-shadow: 0 0 10px;
+}
+
