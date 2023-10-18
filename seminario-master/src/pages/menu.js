@@ -59,13 +59,13 @@ function Menu(){
         Endereco: '/simulacao_agua'
     });
     const [planck1, setPlanck] = useState({
-        Titulo: 'Pendulo',
-        Resumo: 'PREENCHER COM O RESUMO DA Agua',
-        Endereco: '/planck2'
+        Titulo: 'Planck Bolas Caindo',
+        Resumo: 'PREENCHER COM O RESUMO Do Planck Bolas Caindo',
+        Endereco: '/planck'
     });
     const [planck2, setPlanck2] = useState({
-        Titulo: 'Pendulo',
-        Resumo: 'PREENCHER COM O RESUMO DA Agua',
+        Titulo: 'Planck Gangorra',
+        Resumo: 'PREENCHER COM O RESUMO Do Planck Gangorra',
         Endereco: '/planck2'
     });
 
