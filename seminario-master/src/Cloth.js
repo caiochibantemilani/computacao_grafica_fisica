@@ -127,6 +127,7 @@ class Cloth extends React.Component {
     </html>  `
       return (
       <div>
+        <div className=" butao btn btn-primary">Menu</div>
         <iframe
           srcDoc={srcDoc} // Substitua pelo caminho correto para o seu arquivo HTML
           title="Meu Iframe"

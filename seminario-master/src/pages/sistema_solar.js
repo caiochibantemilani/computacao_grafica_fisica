@@ -116,6 +116,7 @@ function SistemaSolar(anterior='') {
                     onMouseMove={handleMouseMove}
                     onWheel={handleWheel}
                 >
+                    <div className=" butao btn btn-primary">Menu</div>
                     <div className="instrucoes">        
                         <div className="instrucao_esquerda">Use o mouse para se locomover pelo universo<span className="icon"><BsArrowsMove/></span></div>
                         <div className="instrucao_direita">Para dar zoom use o scroll do mouse<span className="icon"><BsZoomIn/></span></div>
