@@ -18,7 +18,7 @@ function App() {
   return (
     <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Menu />}></Route>
+          <Route path="" element={<Menu />}></Route>
           <Route path="/sistemaSolar" element={<SistemaSolar/>}></Route>
           <Route path="/mola" element={<SpringSimulation/>}></Route>
           <Route path="/pendulum" element={<PendulumSimulation/>}></Route>

@@ -82,7 +82,7 @@ class MatterGame extends React.Component {
     `
       return (
       <div>
-        <div className=" butao btn btn-primary">Menu</div>
+        <a href={'/'} className=" butao btn btn-primary">Menu</a>
         <iframe
           srcDoc={srcDoc} // Substitua pelo caminho correto para o seu arquivo HTML
           title="Meu Iframe"
