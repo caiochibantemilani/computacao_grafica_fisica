@@ -42,22 +42,22 @@ function Menu(){
     });
     const [cloth, setCloth] = useState({
         Titulo: 'Cloth',
-        Resumo: 'PREENCHER COM O RESUMO DA Cloth',
+        Resumo: 'Esta simulação tem como objetivo demonstrar o funcionamento de um tecido em uma renderização feita pela engine no Matter Js.',
         Endereco: '/cloth'
     });
     const [newton, setNewton] = useState({
         Titulo: 'Newton',
-        Resumo: 'PREENCHER COM O RESUMO DA Newton',
+        Resumo: 'Simulação para o experimento do Pêndulo de Newton, tem como objetivo simular a conservação da quantidade de movimento.',
         Endereco: '/NewtonCradle'
     });
     const [game, setGame] = useState({
         Titulo: 'Game',
-        Resumo: 'PREENCHER COM O RESUMO DA Game',
+        Resumo: 'Um pequeno exemplo de jogo que pode ser feito utilizando a engine do Matter js',
         Endereco: '/game'
     });
     const [agua, setAgua] = useState({
         Titulo: 'Pendulo',
-        Resumo: 'PREENCHER COM O RESUMO DA Agua',
+        Resumo: 'Este exemplo demonstra o comportamente de partículas sendo utilizadas para simular água',
         Endereco: '/simulacao_agua'
     });
     const [planck1, setPlanck] = useState({
@@ -145,7 +145,7 @@ function Menu(){
                 </div>
                 <li className='tema'>
                     <img onClick={() => opcao_selecionada(clothImage, cloth)} src={clothImage} className="tema_imagem" alt='vazio'/> 
-                    <div className="legenda ">Cloth</div>
+                    <div className="legenda ">Simulação de tecido</div>
                 </li>
                 <li className='tema'>
                     <img onClick={() => opcao_selecionada(NewtonImage, newton)} src={NewtonImage} className="tema_imagem" alt='vazio'/> 
