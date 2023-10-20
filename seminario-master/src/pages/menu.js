@@ -11,6 +11,7 @@ import gameImage from '../images/game.png'
 import WaterImage from '../images/water.png'
 import PlanckImage from '../images/planck.png'
 import Planck2Image from '../images/planck2.png';
+import Accordion from 'react-bootstrap/Accordion';
 import './menu.css'
 
 function Menu(){
@@ -102,6 +103,18 @@ function Menu(){
             <div className="Sumario">
                 <h2 className='h2'>Física aplicadas em JavaScript</h2>
                 <hr className='hr'></hr>
+                <div className='introducao'>
+                    <Accordion defaultActiveKey="0">
+                        <Accordion.Item eventKey="1">
+                            <Accordion.Header>
+                                <h2 className='h3'>Introdução à Biblioteca P5.js</h2>
+                            </Accordion.Header>
+                            <Accordion.Body>
+                                P5.js é uma biblioteca JavaScript que facilita a criação de simulações físicas interativas. Ela fornece funções para manipular elementos gráficos e implementar leis da física, como movimento, colisões e gravidade, tornando a criação de simulações realistas e envolventes acessível a desenvolvedores e artistas.
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
+                </div>
                 <li className="tema">
                     <img onClick={() => opcao_selecionada(planets, gravidade)}  src={planets} alt='vazio' className="tema_imagem" /> 
                     <div className="legenda ">Gravidade</div>
@@ -118,6 +131,18 @@ function Menu(){
                     <img onClick={() => opcao_selecionada(colisaoImage, colisao)} src={colisaoImage} className="tema_imagem" alt='vazio'/> 
                     <div className="legenda ">Simulação de colisão</div>
                 </li>
+                <div className='introducao'>
+                    <Accordion defaultActiveKey="0">
+                        <Accordion.Item eventKey="1">
+                            <Accordion.Header>
+                                <h2 className='h3'>Introdução à Biblioteca Matter.js</h2>
+                            </Accordion.Header>
+                            <Accordion.Body>
+                                Matter.js é uma biblioteca de simulação física em JavaScript. Ela permite criar simulações de física realistas, como colisões, gravidade e dinâmica de objetos em um ambiente 2D. Matter.js oferece um conjunto de ferramentas para criar jogos, animações e aplicações interativas com elementos físicos autênticos, tornando possível modelar o comportamento de objetos em um ambiente virtual de forma precisa e envolvente. É amplamente utilizada no desenvolvimento de jogos, simulações educacionais e visualizações interativas.
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
+                </div>
                 <li className='tema'>
                     <img onClick={() => opcao_selecionada(clothImage, cloth)} src={clothImage} className="tema_imagem" alt='vazio'/> 
                     <div className="legenda ">Cloth</div>
@@ -134,6 +159,18 @@ function Menu(){
                     <img onClick={() => opcao_selecionada(WaterImage, agua)} src={WaterImage} className="tema_imagem" alt='vazio'/> 
                     <div className="legenda ">Simulação de água</div>
                 </li>
+                <div className='introducao'>
+                    <Accordion defaultActiveKey="0">
+                        <Accordion.Item eventKey="1">
+                            <Accordion.Header>
+                                <h2 className='h3'>Introdução à Biblioteca Planck.js</h2>
+                            </Accordion.Header>
+                            <Accordion.Body>
+                                Planck.js é uma biblioteca JavaScript de simulação física 2D que permite criar facilmente simulações realistas de física em navegadores web e aplicativos. Ele oferece um motor de física sólido, com suporte para corpos rígidos, colisões, juntas e detecção de contatos. Planck.js é adequado para desenvolver jogos, animações interativas e aplicativos que requerem simulações precisas de movimento, gravidade e colisões. Com uma API simples e documentação abrangente, Planck.js simplifica o processo de criação de simulações físicas imersivas em projetos web, ajudando a proporcionar experiências envolventes e realistas aos usuários.
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
+                </div>
                 <li className='tema'>
                     <img onClick={() => opcao_selecionada(PlanckImage, planck1)} src={PlanckImage} className="tema_imagem" alt='vazio'/> 
                     <div className="legenda ">Exemplo de planck 1</div>
