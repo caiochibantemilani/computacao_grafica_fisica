@@ -83,8 +83,12 @@ class Sketch extends Component {
   }
 
   render() {
-    <a href={'/'} className=" butao btn btn-primary">Menu</a>
-    return <div ref={this.sketchRef}></div>;
+    return (
+      <div>
+        <a href={'/'} className=" butao btn btn-primary">Menu</a>
+        <div ref={this.sketchRef}></div>
+      </div>
+    )
   }
 }
 

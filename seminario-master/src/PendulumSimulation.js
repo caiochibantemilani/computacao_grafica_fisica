@@ -60,7 +60,12 @@ class PendulumSimulation extends Component {
   };
 
   render() {
-    return <div ref={(el) => (this.canvasContainer = el)} />;
+    return (
+      <div>
+        <a href={'/'} className=" butao btn btn-primary">Menu</a>
+        <div ref={(el) => (this.canvasContainer = el)} />
+      </div>
+    )
   }
 }
 
