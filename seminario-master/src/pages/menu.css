@@ -35,6 +35,7 @@ body {
     width: 100%;
     background-image: linear-gradient(#11111100 5%, #111122 45%, #111122 50%);
     bottom: 0;
+    text-align: center;
 }
 
 .legenda {
@@ -141,11 +142,11 @@ body {
   }
 
 .accordion-item{
-    background-color: gray;
+    color: white;
 }
 
 .accordion-button{
-    background-color: gray;
+    background-color: #44444455;
 }
 
 .accordion-button:not(.collapsed) {
