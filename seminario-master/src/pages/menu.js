@@ -11,6 +11,7 @@ import gameImage from '../images/game.png'
 import WaterImage from '../images/water.png'
 import PlanckImage from '../images/planck.png'
 import Planck2Image from '../images/planck2.png';
+import TesteP5Image from '../images/gravidade_teste.png';
 import Accordion from 'react-bootstrap/Accordion';
 import './menu.css'
 
@@ -82,7 +83,7 @@ function Menu(){
     });
     const [exemplop5, setExemploP5] = useState({
         Titulo: 'Exemplo P5',
-        Resumo: 'PREENCHER COM O RESUMO Do Planck Gangorra',
+        Resumo: 'Aqui está um exemplo prático que demonstra o funcionamento da biblioteca P5, que é focada em design.',
         Codigo: `<!DOCTYPE html>
         <html>
           <head>
@@ -283,9 +284,9 @@ function Menu(){
                 </li>
                 <h2 className='h2'>Exemplo de um código em P5</h2>
                 <hr className='hr'></hr>
-                <li onClick={() => opcao_selecionada(exemplop5, exemplop5)} className="tema">
-                    <img src={exemplop5} alt='vazio' className="tema_imagem" /> 
-                    <div className="legenda ">Gravidade</div>
+                <li onClick={() => opcao_selecionada(TesteP5Image, exemplop5)} className="tema">
+                    <img src={TesteP5Image} alt='vazio' className="tema_imagem" /> 
+                    <div className="legenda ">Teste de Gravidade</div>
                 </li>
                 <div className='introducao'>
                     <Accordion defaultActiveKey="0">
