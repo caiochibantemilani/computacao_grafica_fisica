@@ -40,6 +40,25 @@
   right: 0;
 }
 
+@media screen and (max-width: 800px) {
+  .celular {
+    position: absolute;
+    background-color: #112;
+    z-index: 10000000000000000000000000;
+    height: 100%;
+    width: 100%;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  .celular::after {
+    content: 'Feito apenas para Computador';
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

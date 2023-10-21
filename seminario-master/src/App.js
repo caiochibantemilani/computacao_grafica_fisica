@@ -12,6 +12,8 @@ import MatterGame from './MatterGame';
 import WaterSimulation from './WaterSimulation'
 import Plank1 from './planck1';
 import Planck2 from './plank2';
+import ExemploP5 from './ExemploP5';
+import ExemploMatterJS from './ExemploMatterJS';
 import Menu from './pages/menu'
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
           <Route path="/simulacao_agua" element={<WaterSimulation/>}></Route>
           <Route path="/planck" element={<Plank1/>}></Route>
           <Route path="/planck2" element={<Planck2/>}></Route>
+          <Route path="/ExemploP5" element={<ExemploP5/>}></Route>
+          <Route path="/ExemploMatterJS" element={<ExemploMatterJS/>}></Route>
         </Routes>
          
     </BrowserRouter>
