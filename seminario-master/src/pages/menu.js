@@ -28,13 +28,13 @@ function Menu(){
     });
     const [mola, setMola] = useState({
         Titulo: 'Mola',
-        Resumo: 'PREENCHER COM O RESUMO DA Mola',
+        Resumo: 'Esta simulação tem como objetivo demonstrar o funcionamento de uma mola com gravidade em uma renderização feita pelo P5.',
         Codigo: '',
         Endereco: '/mola'
     });
     const [pendulo, setPendulo] = useState({
         Titulo: 'Pendulo',
-        Resumo: 'Esta simulação tem como objetivo demonstrar o funcionamento de uma mola com gravidade em uma renderização feita pelo P5.',
+        Resumo: 'Esta simulação tem como objetivo demonstrar o funcionamento de um pendulo gerado em uma renderização feita pelo P5.',
         Codigo: '',
         Endereco: '/pendulum'
     });
