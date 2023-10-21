@@ -273,8 +273,8 @@ function Menu(){
                     <img src={molaImage} className="tema_imagem" alt='vazio'/> 
                     <div className="legenda ">Simulação de Mola</div>
                 </li> 
-                <li className='tema'>
-                    <img onClick={() => opcao_selecionada(penduloImage, pendulo)} src={penduloImage} className="tema_imagem" alt='vazio'/> 
+                <li onClick={() => opcao_selecionada(penduloImage, pendulo)} className='tema'>
+                    <img src={penduloImage} className="tema_imagem" alt='vazio'/> 
                     <div className="legenda ">Simulação de pêndulo</div>
                 </li>
                 <li onClick={() => opcao_selecionada(colisaoImage, colisao)} className='tema'>
