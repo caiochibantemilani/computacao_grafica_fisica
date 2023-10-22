@@ -267,7 +267,7 @@ body {
 }
 
 .fechar {
-    background-color: darkred;
+    background-color: red;
     border-radius: 100px;
     box-shadow: 0 0 10px;
     color: #000;
@@ -285,7 +285,7 @@ body {
 }
 
 .fechar:hover{
-    background-color: red;
+    background-color: darkred;
     transition: 0.8s;
 }
 
