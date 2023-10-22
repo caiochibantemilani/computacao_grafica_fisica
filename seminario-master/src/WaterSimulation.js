@@ -17,6 +17,17 @@ class NewtonCradle extends React.Component {
             canvas {
             background-color: #f0f0f0;
             }
+            body, html {
+              margin: 0;
+              height: 100%;
+              overflow: hidden;
+            }
+
+            canvas {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }          
         </style>
         </head>
         <body>
@@ -29,8 +40,8 @@ class NewtonCradle extends React.Component {
                 element: document.body,
                 engine: engine,
                 options:{
-                    width:2000,
-                    height: 600,
+                    width:1500,
+                    height: 700,
                     wireframes: false
                 }
             });
@@ -52,8 +63,8 @@ class NewtonCradle extends React.Component {
             let firing = true
             Matter.Events.on(engine,'afterUpdate', function() {
                 if (firing) {
-                    ball = Matter.Bodies.circle(200, 0, 1.5, { friction: 0.00005, restitution: 0.2, density: 0.1 });
-                    ball.render.fillStyle = 'Blue'; // Define a cor de preenchimento da nova bolinha como vermelha
+                    ball = Matter.Bodies.circle(200, 0, 0.8, { friction: 0.00005, restitution: 0.2, density: 0.1 });
+                    ball.render.fillStyle = 'Blue'; // Define a cor de preenchimento da nova bolinha como azul
                     Matter.World.add(engine.world, ball);
                     firing = true;
                 }
@@ -72,13 +83,13 @@ class NewtonCradle extends React.Component {
         </html>
     `
       return (
-      <div>
+      <div className='grande'>
         <a href={'/'} className=" butao btn btn-primary">Menu</a>
         <iframe
           srcDoc={srcDoc} // Substitua pelo caminho correto para o seu arquivo HTML
           title="Meu Iframe"
-          width="1200"
-          height="800"
+          width="100%"
+          height="100%"
         ></iframe>
       </div>
     );

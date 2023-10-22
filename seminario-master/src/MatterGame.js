@@ -17,6 +17,17 @@ class MatterGame extends React.Component {
         canvas {
           background-color: #f0f0f0;
         }
+        body, html {
+          margin: 0;
+          height: 100%;
+          overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
       </style>
     </head>
     <body>
@@ -29,7 +40,7 @@ class MatterGame extends React.Component {
             element: document.body,
             engine: engine,
             options:{
-                width:2000,
+                width:1350,
                 height: 600,
                 wireframes: false
             }
@@ -81,13 +92,13 @@ class MatterGame extends React.Component {
     
     `
       return (
-      <div>
+      <div className='grande'>
         <a href={'/'} className=" butao btn btn-primary">Menu</a>
         <iframe
           srcDoc={srcDoc} // Substitua pelo caminho correto para o seu arquivo HTML
           title="Meu Iframe"
-          width="1550"
-          height="800"
+          width="100%"
+          height="100%"
         ></iframe>
       </div>
     );

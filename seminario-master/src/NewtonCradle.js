@@ -14,6 +14,19 @@ class NewtonCradle extends React.Component {
         <!-- Importe o Matter.js diretamente do GitHub -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js" integrity="sha512-5T245ZTH0m0RfONiFm2NF0zcYcmAuNzcGyPSQ18j8Bs5Pbfhp5HP1hosrR8XRt5M3kSRqzjNMYpm2+it/AUX/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
+    <style>
+    body, html {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }    
+    </style>
     <body>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js" integrity="sha512-5T245ZTH0m0RfONiFm2NF0zcYcmAuNzcGyPSQ18j8Bs5Pbfhp5HP1hosrR8XRt5M3kSRqzjNMYpm2+it/AUX/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
@@ -38,8 +51,8 @@ class NewtonCradle extends React.Component {
               element: document.body,
               engine: engine,
               options: {
-                  width: 800,
-                  height: 600,
+                  width: 1000,
+                  height: 500,
                   showVelocity: true
               }
           });
@@ -123,13 +136,13 @@ class NewtonCradle extends React.Component {
     </html>
     `
       return (
-      <div>
+      <div className='grande'>
         <a href={'/'} className=" butao btn btn-primary">Menu</a>
         <iframe
           srcDoc={srcDoc} // Substitua pelo caminho correto para o seu arquivo HTML
           title="Meu Iframe"
-          width="800"
-          height="800"
+          width="100%"
+          height="100%"
         ></iframe>
       </div>
     );

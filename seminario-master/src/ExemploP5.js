@@ -9,6 +9,14 @@ class ExemploP5 extends React.Component {
       <head>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
       </head>
+      <style>
+      html {
+        overflow: hidden;
+      }
+      main {
+        overflow: hidden;
+      }
+      </style>
       <body>
         <script>
           let ball;  // Variável para representar a bola
@@ -16,7 +24,7 @@ class ExemploP5 extends React.Component {
           let ground;
     
           function setup() {
-            createCanvas(400, 400);  // Cria um canvas de 400x400 pixels
+            createCanvas(window.innerWidth, window.innerHeight);  // Cria um canvas de 400x400 pixels
             ball = new Ball();  // Cria uma instância da bola
             ground = height - 20;  // Posição do chão
           }
@@ -66,16 +74,16 @@ class ExemploP5 extends React.Component {
     </html>
     `
       return (
-      <div>
+      <div className='grande'>
         <a href={'/'} className=" butao btn btn-primary">Menu</a>
         <iframe
           srcDoc={srcDoc} // Substitua pelo caminho correto para o seu arquivo HTML
           title="Meu Iframe"
-          width="1200"
-          height="800"
+          width="100%"
+          height="100%"
         ></iframe>
       </div>
-    );
+    );  
   }
 }
 

@@ -12,6 +12,19 @@ class Planck2 extends React.Component {
     <title>Planck.js Example</title>
     <script src="https://cdn.jsdelivr.net/npm/planck-js@0.2.3/dist/planck-with-testbed.js"></script>
 </head>
+<style>
+body, html {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+</style>
 <body>
     <script>
        // Inicializa o ambiente de teste usando a biblioteca Planck.
@@ -94,13 +107,13 @@ planck.testbed('BulletTest', function(testbed) {
 </html>
     `
       return (
-      <div>
+      <div className='grande'>
         <a href={'/'} className=" butao btn btn-primary">Menu</a>
         <iframe
           srcDoc={srcDoc} // Substitua pelo caminho correto para o seu arquivo HTML
           title="Meu Iframe"
-          width="1200"
-          height="800"
+          width="100%"
+          height="100%"
         ></iframe>
       </div>
     );

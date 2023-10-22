@@ -9,12 +9,22 @@ class Cloth extends React.Component {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Newton's Cradle Simulation</title>
-    
-        <!-- Importe o Matter.js diretamente do GitHub -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js" integrity="sha512-5T245ZTH0m0RfONiFm2NF0zcYcmAuNzcGyPSQ18j8Bs5Pbfhp5HP1hosrR8XRt5M3kSRqzjNMYpm2+it/AUX/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
+    <style>
+      body, html {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+    
+      canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }  
+    </style>
     <body>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js" integrity="sha512-5T245ZTH0m0RfONiFm2NF0zcYcmAuNzcGyPSQ18j8Bs5Pbfhp5HP1hosrR8XRt5M3kSRqzjNMYpm2+it/AUX/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
       var Example = Example || {};
     
@@ -38,8 +48,8 @@ class Cloth extends React.Component {
           element: document.body,
           engine: engine,
           options: {
-            width: 500,
-            height: 600
+            width: 2500,
+            height: 1000
           }
         });
     
@@ -126,13 +136,13 @@ class Cloth extends React.Component {
     </body>
     </html>  `
       return (
-      <div>
+      <div className='grande'>
         <a href={'/'} className=" butao btn btn-primary">Menu</a>
         <iframe
           srcDoc={srcDoc} // Substitua pelo caminho correto para o seu arquivo HTML
           title="Meu Iframe"
-          width="600"
-          height="650"
+          width="100%"
+          height="100%"
         ></iframe>
       </div>
     );

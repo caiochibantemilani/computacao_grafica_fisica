@@ -1,9 +1,28 @@
-body {
+.App {
+  text-align: center;
+}
+
+html {
+  height: 100%;
   overflow: hidden;
 }
 
-.App {
-  text-align: center;
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.grande {
+  height: 100%;  
+  width: 100%;
+}
+
+main {
+  position: fixed;
+  top: 0;
 }
 
 .titulo {

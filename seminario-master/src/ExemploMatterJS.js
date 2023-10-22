@@ -9,6 +9,19 @@ class ExemploP5 extends React.Component {
       <head>
         <title>Matter.js Exemplo de Gravidade com Força</title>
       </head>
+      <style>
+      body, html {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      canvas {
+          display: block;
+          width: 100%;
+          height: 100%;
+      }
+      </style>
       <body>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.17.1/matter.js"></script>
         <script>
@@ -33,8 +46,8 @@ class ExemploP5 extends React.Component {
             element: document.body,
             engine: engine,
             options: {
-              width: 800,
-              height: 400
+              width: 1250,
+              height: 900
             }
           });
         
@@ -48,13 +61,13 @@ class ExemploP5 extends React.Component {
       </html>
     `
       return (
-      <div>
+      <div className='grande'>
         <a href={'/'} className=" butao btn btn-primary">Menu</a>
         <iframe
           srcDoc={srcDoc} // Substitua pelo caminho correto para o seu arquivo HTML
           title="Meu Iframe"
-          width="1200"
-          height="800"
+          width="100%"
+          height="100%"
         ></iframe>
       </div>
     );
