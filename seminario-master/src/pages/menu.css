@@ -241,6 +241,7 @@ body {
 .button_codigo {
     width: 500px;
     height: 40px;
+    transition: 1s;
 }
 
 .mensagem_codigo {
@@ -276,5 +277,15 @@ body {
     position: absolute;
     cursor: pointer;
     box-shadow: 0 0 10px;
+    transition: 1s;
+}
+
+.fechar:hover{
+    background-color: red;
+    transition: 1s;
+}
+
+.entrar{
+    transition: 1s;
 }
 

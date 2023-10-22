@@ -12,6 +12,7 @@ import WaterImage from '../images/water.png'
 import PlanckImage from '../images/planck.png'
 import Planck2Image from '../images/planck2.png';
 import TesteP5Image from '../images/gravidade_teste.png';
+import matterImage from '../images/matter_example.png';
 import Accordion from 'react-bootstrap/Accordion';
 import './menu.css'
 
@@ -148,7 +149,7 @@ function Menu(){
     })
     const [exemplomatterjs, setExemploMatterJs] = useState({
         Titulo: 'Exemplo MatterJS',
-        Resumo: 'PREENCHER COM O RESUMO Do Planck Gangorra',
+        Resumo: 'Aqui está um exemplo prático que demonstra o funcionamento da biblioteca Matter.',
         Codigo: `<!DOCTYPE html>
         <html>
         <head>
@@ -245,7 +246,7 @@ function Menu(){
                             )}
                         </div>
                         <div className='botoes_separados'>
-                                <a className="btn btn-primary" href={resumoGeral.Endereco}>Entrar</a>
+                                <a className="btn btn-primary entrar" href={resumoGeral.Endereco}>Entrar</a>
                         </div>
                     </div>
                 </div>
@@ -319,8 +320,8 @@ function Menu(){
                 <h2 className='h2'>Exemplo de um código em MatterJs</h2>
                 <hr className='hr'></hr>
                 <li onClick={() => opcao_selecionada(exemplomatterjs, exemplomatterjs)} className="tema">
-                    <img src={exemplomatterjs} alt='vazio' className="tema_imagem" /> 
-                    <div className="legenda ">Gravidade</div>
+                    <img src={matterImage} alt='vazio' className="tema_imagem" /> 
+                    <div className="legenda ">Teste de Gravidade</div>
                 </li>
                 <div className='introducao'>
                     <Accordion defaultActiveKey="0">
