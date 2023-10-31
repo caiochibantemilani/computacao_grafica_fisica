@@ -311,7 +311,7 @@ function Menu(){
                     <img src={TesteP5Image} alt='vazio' className="tema_imagem" /> 
                     <div className="legenda ">Teste de Gravidade</div>
                 </li>
-                <li onClick={() => opcao_selecionada(ExemplosP5imagem, ExemplosP5)} className="tema">
+                <li onClick={() => opcao_selecionada(ExemplosP5imagem, bibliotecap5)} className="tema">
                     <img src={ExemplosP5Imagem} alt='vazio' className="tema_imagem" /> 
                     <div className="legenda ">Biblioteca P5</div>
                 </li>
