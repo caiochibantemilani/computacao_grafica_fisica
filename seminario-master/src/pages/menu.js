@@ -202,20 +202,20 @@ function Menu(){
         Resumo: 'Biblioteca com diversos exemplos na biblioteca P5',
         Codigo: '',
         Endereco: 'https://p5js.org/examples/'
-    }
+    })
     const [bibliotecamatterjs, setBibliotecaMatterjs] = useState({
         Titulo: 'Biblioteca MatterJs',
         Resumo: 'Biblioteca com diversos exemplos na biblioteca MatterJs',
         Codigo: '',
         Endereco: 'https://codesandbox.io/examples/package/matter-js'
-    }
+    })
 
     const [bibliotecaplanck, setBibliotecaPlanck] = useState({
         Titulo: 'Biblioteca Planck',
         Resumo: 'Biblioteca com diversos exemplos na biblioteca Planck',
         Codigo: '',
         Endereco: 'https://piqnt.com/planck.js'
-    }
+    })
                                                                  
     function opcao_selecionada(teste, resumo){
         setClicado(true);
