@@ -72,13 +72,13 @@ function Menu(){
     });
     const [planck1, setPlanck] = useState({
         Titulo: 'Planck Bolas Caindo',
-        Resumo: 'PREENCHER COM O RESUMO Do Planck Bolas Caindo',
+        Resumo: 'Essa simulação mostra a diferença de pesos ao arrastar um objeto',
         Codigo: '',
         Endereco: '/planck'
     });
     const [planck2, setPlanck2] = useState({
         Titulo: 'Planck Gangorra',
-        Resumo: 'PREENCHER COM O RESUMO Do Planck Gangorra',
+        Resumo: 'Esta simulação mostra a velocidade de um peso caindo em uma alta velocidade e atingindo um objeto',
         Codigo: '',
         Endereco: '/planck2'
     });
