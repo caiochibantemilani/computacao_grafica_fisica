@@ -351,7 +351,7 @@ function Menu(){
                 </li>
                 <li onClick={() => opcao_selecionada(bibliotecamatterjsimage, bibliotecamatterjs)} className="tema">
                     <img src={bibliotecamatterjsimage} alt='vazio' className="tema_imagem" /> 
-                    <div className="legenda ">Teste de Gravidade</div>
+                    <div className="legenda ">Biblioteca Matter JS</div>
                 </li>
                 <div className='introducao'>
                     <Accordion defaultActiveKey="0">
@@ -377,7 +377,7 @@ function Menu(){
                 <hr className='hr'></hr>
                 <li onClick={() => opcao_selecionada(bibliotecaplanckimage, bibliotecaplanck)} className="tema">
                     <img src={bibliotecaplanckimage} alt='vazio' className="tema_imagem" /> 
-                    <div className="legenda ">Teste de Gravidade</div>
+                    <div className="legenda ">Biblioteca Planck</div>
                 </li>
             </div>
             </div>
