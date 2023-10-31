@@ -12,6 +12,9 @@ import WaterImage from '../images/water.png'
 import PlanckImage from '../images/planck.png'
 import Planck2Image from '../images/planck2.png';
 import TesteP5Image from '../images/gravidade_teste.png';
+import ExemplosP5imagem from '../images/p5.png';
+import bibliotecamatterjsimage from '../images/matterjs.png'
+import bibliotecaplanckimage from '../images/planck.png'
 import matterImage from '../images/matter_example.png';
 import Accordion from 'react-bootstrap/Accordion';
 import './menu.css'
@@ -194,7 +197,26 @@ function Menu(){
         </html>`,
         Endereco: '/ExemploMatterJS'
     })
+    const [bibliotecap5, setBibliotecaP5] = useState({
+        Titulo: 'Biblioteca P5',
+        Resumo: 'Biblioteca com diversos exemplos na biblioteca P5',
+        Codigo: '',
+        Endereco: 'https://p5js.org/examples/'
+    }
+    const [bibliotecamatterjs, setBibliotecaMatterjs] = useState({
+        Titulo: 'Biblioteca MatterJs',
+        Resumo: 'Biblioteca com diversos exemplos na biblioteca MatterJs',
+        Codigo: '',
+        Endereco: 'https://codesandbox.io/examples/package/matter-js'
+    }
 
+    const [bibliotecaplanck, setBibliotecaPlanck] = useState({
+        Titulo: 'Biblioteca Planck',
+        Resumo: 'Biblioteca com diversos exemplos na biblioteca Planck',
+        Codigo: '',
+        Endereco: 'https://piqnt.com/planck.js'
+    }
+                                                                 
     function opcao_selecionada(teste, resumo){
         setClicado(true);
         setEvento(teste);
@@ -289,6 +311,10 @@ function Menu(){
                     <img src={TesteP5Image} alt='vazio' className="tema_imagem" /> 
                     <div className="legenda ">Teste de Gravidade</div>
                 </li>
+                <li onClick={() => opcao_selecionada(ExemplosP5imagem, ExemplosP5)} className="tema">
+                    <img src={ExemplosP5Imagem} alt='vazio' className="tema_imagem" /> 
+                    <div className="legenda ">Biblioteca P5</div>
+                </li>
                 <div className='introducao'>
                     <Accordion defaultActiveKey="0">
                         <Accordion.Item eventKey="1">
@@ -323,6 +349,10 @@ function Menu(){
                     <img src={matterImage} alt='vazio' className="tema_imagem" /> 
                     <div className="legenda ">Teste de Gravidade</div>
                 </li>
+                <li onClick={() => opcao_selecionada(bibliotecamatterjsimage, bibliotecamatterjs)} className="tema">
+                    <img src={bibliotecamatterjsimage} alt='vazio' className="tema_imagem" /> 
+                    <div className="legenda ">Teste de Gravidade</div>
+                </li>
                 <div className='introducao'>
                     <Accordion defaultActiveKey="0">
                         <Accordion.Item eventKey="1">
@@ -342,6 +372,12 @@ function Menu(){
                 <li onClick={() => opcao_selecionada(Planck2Image, planck2)} className='tema'>
                     <img src={Planck2Image} className="tema_imagem" alt='vazio'/> 
                     <div className="legenda ">Exemplo de planck 2</div>
+                </li>
+                <h2 className='h2'>Exemplo de um código em MatterJs</h2>
+                <hr className='hr'></hr>
+                <li onClick={() => opcao_selecionada(bibliotecaplanckimage, bibliotecaplanck)} className="tema">
+                    <img src={bibliotecaplanckimage} alt='vazio' className="tema_imagem" /> 
+                    <div className="legenda ">Teste de Gravidade</div>
                 </li>
             </div>
             </div>
