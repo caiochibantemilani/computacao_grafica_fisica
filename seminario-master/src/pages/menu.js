@@ -12,7 +12,7 @@ import WaterImage from '../images/water.png';
 import PlanckImage from '../images/planck.png';
 import Planck2Image from '../images/planck2.png';
 import TesteP5Image from '../images/gravidade_teste.png';
-import ExemplosP5imagem from '../images/p5.png';
+import ExemplosP5imagem from '../images/p5image.png';
 import bibliotecamatterjsimage from '../images/matterjs.png';
 import bibliotecaplanckimage from '../images/planck.png';
 import matterImage from '../images/matter_example.png';
