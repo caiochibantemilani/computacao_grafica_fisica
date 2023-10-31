@@ -149,7 +149,7 @@ function Menu(){
           </body>
         </html>`,
         Endereco: '/ExemploP5'
-    })
+    });
     const [exemplomatterjs, setExemploMatterJs] = useState({
         Titulo: 'Exemplo MatterJS',
         Resumo: 'Aqui está um exemplo prático que demonstra o funcionamento da biblioteca Matter.',
@@ -196,26 +196,26 @@ function Menu(){
         </body>
         </html>`,
         Endereco: '/ExemploMatterJS'
-    })
+    });
     const [bibliotecap5, setBibliotecaP5] = useState({
         Titulo: 'Biblioteca P5',
         Resumo: 'Biblioteca com diversos exemplos na biblioteca P5',
         Codigo: '',
         Endereco: 'https://p5js.org/examples/'
-    })
+    });
     const [bibliotecamatterjs, setBibliotecaMatterjs] = useState({
         Titulo: 'Biblioteca MatterJs',
         Resumo: 'Biblioteca com diversos exemplos na biblioteca MatterJs',
         Codigo: '',
         Endereco: 'https://codesandbox.io/examples/package/matter-js'
-    })
+    });
 
     const [bibliotecaplanck, setBibliotecaPlanck] = useState({
         Titulo: 'Biblioteca Planck',
         Resumo: 'Biblioteca com diversos exemplos na biblioteca Planck',
         Codigo: '',
         Endereco: 'https://piqnt.com/planck.js'
-    })
+    });
                                                                  
     function opcao_selecionada(teste, resumo){
         setClicado(true);
