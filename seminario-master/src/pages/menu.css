@@ -207,7 +207,7 @@ body {
 }
 
 .codigo_total {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
