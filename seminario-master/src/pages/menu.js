@@ -89,65 +89,76 @@ function Menu(){
         Titulo: 'Exemplo P5',
         Resumo: 'Aqui está um exemplo prático que demonstra o funcionamento da biblioteca P5, que é focada em design.',
         Codigo: `<!DOCTYPE html>
-        <html>
-          <head>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-          </head>
-          <body>
-            <script>
-              let ball;  // Variável para representar a bola
-              let gravity = 0.2;  // Gravidade (aceleração)
-              let ground;
-        
-              function setup() {
-                createCanvas(400, 400);  // Cria um canvas de 400x400 pixels
-                ball = new Ball();  // Cria uma instância da bola
-                ground = height - 20;  // Posição do chão
-              }
-        
-              function draw() {
-                background(220);  // Define o fundo do canvas
-        
-                ball.applyForce(gravity);  // Aplica a força da gravidade à bola
-                ball.update();  // Atualiza a posição e a velocidade da bola
-                ball.checkGround();  // Verifica se a bola atingiu o chão
-                ball.display();  // Exibe a bola na tela
-              }
-        
-              class Ball {
-                constructor() {
-                  this.position = createVector(width / 2, 0);  // Posição inicial no topo do canvas
-                  this.velocity = createVector(0, 10);  // Velocidade inicial
-                }
-        
-                applyForce(force) {
-                  // Aplica uma força à bola (afeta a velocidade)
-                  this.velocity.y += force;
-                }
-        
-                update() {
-                  // Atualiza a posição e a velocidade da bola com base na gravidade
-                  this.position.y += this.velocity.y;
-                  this.velocity.y += gravity;
-                }
-        
-                checkGround() {
-                  // Verifica se a bola atingiu o chão
-                  if (this.position.y >= ground) {
-                    this.position.y = ground;  // Evita que a bola vá abaixo do chão
-                    this.velocity.y *= -0.8;  // Inverte a velocidade com amortecimento
-                  }
-                }
-        
-                display() {
-                  // Desenha a bola na posição atual
-                  fill(255, 0, 0);  // Cor da bola (vermelha)
-                  ellipse(this.position.x, this.position.y, 20, 20);  // Desenha a bola como uma elipse
-                }
-              }
-            </script>
-          </body>
-        </html>`,
+                    <html>
+                      <head>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+                      </head>
+                      <style>
+                        html {
+                          overflow: hidden;
+                        }
+                        main {
+                          overflow: hidden;
+                        }
+                      </style>
+                      <body>
+                        <script>
+                          // Definindo variáveis e funções
+                    
+                          let ball;  // Variável para representar a bola
+                          let gravity = 0.2;  // Gravidade (aceleração)
+                          let ground;
+                    
+                          function setup() {
+                            createCanvas(window.innerWidth, window.innerHeight);  // Cria um canvas do tamanho da janela do navegador
+                            ball = new Ball();  // Cria uma instância da bola
+                            ground = height - 20;  // Define a posição do chão
+                          }
+                    
+                          function draw() {
+                            background(220);  // Define o fundo do canvas
+                    
+                            ball.applyForce(gravity);  // Aplica a força da gravidade à bola
+                            ball.update();  // Atualiza a posição e a velocidade da bola
+                            ball.checkGround();  // Verifica se a bola atingiu o chão
+                            ball.display();  // Exibe a bola na tela
+                          }
+                    
+                          class Ball {
+                            constructor() {
+                              this.position = createVector(width / 2, 0);  // Posição inicial no topo do canvas
+                              this.velocity = createVector(0, 10);  // Velocidade inicial
+                            }
+                    
+                            applyForce(force) {
+                              // Aplica uma força à bola (afeta a velocidade)
+                              this.velocity.y += force;
+                            }
+                    
+                            update() {
+                              // Atualiza a posição e a velocidade da bola com base na gravidade
+                              this.position.y += this.velocity.y;
+                              this.velocity.y += gravity;
+                            }
+                    
+                            checkGround() {
+                              // Verifica se a bola atingiu o chão
+                              if (this.position.y >= ground) {
+                                this.position.y = ground;  // Evita que a bola vá abaixo do chão
+                                this.velocity.y *= -0.8;  // Inverte a velocidade com amortecimento
+                              }
+                            }
+                    
+                            display() {
+                              // Desenha a bola na posição atual
+                              fill(255, 0, 0);  // Cor da bola (vermelha)
+                              ellipse(this.position.x, this.position.y, 20, 20);  // Desenha a bola como uma elipse
+                            }
+                          }
+                        </script>
+                      </body>
+                    </html>
+        `,
         Endereco: '/ExemploP5'
     })
     const [exemplomatterjs, setExemploMatterJs] = useState({
